@@ -8,5 +8,7 @@ import numpy as np
 import matplotlib.pyplot as pyplot
 import seaborn as sns
 
-
+# Read iris data from csv file
+iris = pd.read_csv("iris_data/bezdekIris.data", 
+names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "class"])
 
