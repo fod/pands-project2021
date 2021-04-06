@@ -20,4 +20,8 @@ full_summary = iris.describe().round(decimals=2)
 
 
 
-#Histogram, bee swarm, violin, box, ECDF
+#Histogram, bee swarm, violin, box, ECDF, scatter
+#Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =
+# variability due to codependence / independent variability
+
+#Probability of misclassification
