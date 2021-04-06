@@ -12,3 +12,12 @@ import seaborn as sns
 iris = pd.read_csv("iris_data/bezdekIris.data", 
 names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "class"])
 
+# Iris data now in iris pandas dataframe
+# Generate decriptive statistics for entire dataset
+full_summary = iris.describe().round(decimals=2)
+
+# Descriptive stats for each iris species
+
+
+
+#Histogram, bee swarm, violin, box, ECDF
