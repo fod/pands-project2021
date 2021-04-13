@@ -11,6 +11,36 @@ Fisher's Iris Data set is a collection of 50 observations of four measurements ‚
 The dataset used for this project was downloaded from the UCI Machine Learning Repository (Dua and Graff, 2019)
 
 
+## Tasks
+### EDA
+1. Generate descriptive statistics for the dataset.
+2. Generate histograms for each measurement
+3. Generate scatterplots / pairplots for all of the variables
+4. Examine some other descriptive plots:
+    1. Box plot
+    2. Violin plot
+    3. Bee swarm plot
+    4. Empirical Cumulative Distribution Function (eCDF)
+
+### Correlation
+1. Covariance
+2. œÅ (Pearson correlation)
+3. Variability due to codependence / independent variability
+
+### Separation improvement
+1. Dimensionality reduction
+    1. LDA
+    2. PCA
+
+### Uncertainty measurement
+1. Probability of misclassification
+2. identification of high probability areas
+3. Identification on plots of areas with higher likelihood of misclassification (density surface?)
+
+### Machine learning
+1. Unsupervised classification
+2. Supervised classification
+3. Function estimation
 
 ## References
 
