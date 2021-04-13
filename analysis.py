@@ -17,8 +17,8 @@ names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "class"])
 full_summary = iris.describe().round(decimals=2)
 
 # Descriptive stats for each iris species
-
-
+class_summaries = iris.groupby(iris["class"]).describe().transpose()
+    
 
 #Histogram, bee swarm, violin, box, ECDF, scatter
 #Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =
