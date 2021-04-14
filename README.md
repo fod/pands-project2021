@@ -14,77 +14,21 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 ## Tasks
 ### EDA
 1. Generate descriptive statistics for the dataset.
-    [link](summary_stats.csv)
+    [link](summary_stats.md)
 
-    <table border="1" class="dataframe" style="font-size: 0.7em">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Sepal Length</th>
-      <th>Sepal Width</th>
-      <th>Petal Length</th>
-      <th>Petal Width</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>150.00</td>
-      <td>150.00</td>
-      <td>150.00</td>
-      <td>150.00</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>5.84</td>
-      <td>3.06</td>
-      <td>3.76</td>
-      <td>1.20</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.83</td>
-      <td>0.44</td>
-      <td>1.77</td>
-      <td>0.76</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>4.30</td>
-      <td>2.00</td>
-      <td>1.00</td>
-      <td>0.10</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>5.10</td>
-      <td>2.80</td>
-      <td>1.60</td>
-      <td>0.30</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>5.80</td>
-      <td>3.00</td>
-      <td>4.35</td>
-      <td>1.30</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>6.40</td>
-      <td>3.30</td>
-      <td>5.10</td>
-      <td>1.80</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>7.90</td>
-      <td>4.40</td>
-      <td>6.90</td>
-      <td>2.50</td>
-    </tr>
-  </tbody>
-</table>
+
+
+|       |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width |
+|:------|---------------:|--------------:|---------------:|--------------:|
+| count |         150    |        150    |         150    |        150    |
+| mean  |           5.84 |          3.06 |           3.76 |          1.2  |
+| std   |           0.83 |          0.44 |           1.77 |          0.76 |
+| min   |           4.3  |          2    |           1    |          0.1  |
+| 25%   |           5.1  |          2.8  |           1.6  |          0.3  |
+| 50%   |           5.8  |          3    |           4.35 |          1.3  |
+| 75%   |           6.4  |          3.3  |           5.1  |          1.8  |
+| max   |           7.9  |          4.4  |           6.9  |          2.5  |
+
 
 
 2. Generate histograms for each measurement

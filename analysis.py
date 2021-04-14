@@ -4,7 +4,7 @@
 
 # Imports
 import pandas as pd
-#import numpy as np
+import numpy as np
 #import matplotlib.pyplot as pyplot
 #import seaborn as sns
 
@@ -18,7 +18,10 @@ full_summary = iris.describe().round(decimals=2)
 
 # write summary stats to file
 full_summary.to_html("summary_stats.html")
+#np.savetxt("summary_stats.txt", full_summary, fmt="%.2f") # https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html
 
+with open("summary_stats.md", "w+") as f:
+    f.write(full_summary.to_markdown())     # To read this back: https://stackoverflow.com/questions/60154404/is-there-the-equivalent-of-to-markdown-to-read-data
 
 # Descriptive stats for each iris species
 class_summaries = iris.groupby(iris["class"]).describe().round(decimals=2).transpose()
