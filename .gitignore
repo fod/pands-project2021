@@ -1,6 +1,5 @@
 # Project specific
 papers/
-*.ipynb
 .vscode/
 
 # Byte-compiled / optimized / DLL files
