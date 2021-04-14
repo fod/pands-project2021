@@ -16,7 +16,7 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 1. Generate descriptive statistics for the dataset.
     [link](summary_stats.csv)
 
-    <table border="1" class="dataframe">
+    <table border="1" class="dataframe" style="font-size: 0.7em">
   <thead>
     <tr style="text-align: right;">
       <th></th>
