@@ -21,11 +21,12 @@ full_summary.to_html("summary_stats.html")
 #np.savetxt("summary_stats.txt", full_summary, fmt="%.2f") # https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html
 
 with open("summary_stats.md", "w+") as f:
-    f.write(full_summary.to_markdown())     # To read this back: https://stackoverflow.com/questions/60154404/is-there-the-equivalent-of-to-markdown-to-read-data
+    f.write(full_summary.to_markdown(tablefmt="github"))     # To read this back: https://stackoverflow.com/questions/60154404/is-there-the-equivalent-of-to-markdown-to-read-data
 
 # Descriptive stats for each iris species
 class_summaries = iris.groupby(iris["class"]).describe().round(decimals=2).transpose()
-print(class_summaries)
+with open("class_summaries.md", "w+") as f:
+    f.write(class_summaries.to_markdown())
 
 #Histogram, bee swarm, violin, box, ECDF, scatter
 #Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =

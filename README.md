@@ -19,7 +19,7 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 
 
 |       |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width |
-|:------|---------------:|--------------:|---------------:|--------------:|
+|-------|----------------|---------------|----------------|---------------|
 | count |         150    |        150    |         150    |        150    |
 | mean  |           5.84 |          3.06 |           3.76 |          1.2  |
 | std   |           0.83 |          0.44 |           1.77 |          0.76 |
