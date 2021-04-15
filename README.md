@@ -145,3 +145,6 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science. 
 
 Fisher, R.A. (1936). The use of multiple measurements in taxonomic problems, Annual Eugenics, 7, Part II, 179-188 
+
+https://stackoverflow.com/a/59852474 (markdown columns)
+https://pypi.org/project/tabulate/ (tablefmt option in pandas.DataFrame.to_markdown())
