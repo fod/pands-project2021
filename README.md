@@ -29,7 +29,15 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 | 75%   |           6.4  |          3.3  |           5.1  |          1.8  |
 | max   |           7.9  |          4.4  |           6.9  |          2.5  |
 
-Petal Length:
+
+<table>
+<tr>
+<th> Petal Length: </th>
+<th> Sepal Length: </th>
+</tr>
+<tr>
+<td>
+
 |       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
 |-------|---------------|-------------------|------------------|
 | count |         50    |             50    |            50    |
@@ -41,7 +49,10 @@ Petal Length:
 | 75%   |          1.58 |              4.6  |             5.88 |
 | max   |          1.9  |              5.1  |             6.9  |
 
-Sepal Length:
+</td>
+<td>
+
+
 |       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
 |-------|---------------|-------------------|------------------|
 | count |         50    |             50    |            50    |
@@ -52,6 +63,14 @@ Sepal Length:
 | 50%   |          5    |              5.9  |             6.5  |
 | 75%   |          5.2  |              6.3  |             6.9  |
 | max   |          5.8  |              7    |             7.9  |
+
+</td>
+</tr>
+</table>
+
+
+
+
 
 Petal Width:
 |       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
