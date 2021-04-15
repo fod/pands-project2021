@@ -32,8 +32,8 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 
 <table>
 <tr>
-<th> Petal Length: </th>
-<th> Sepal Length: </th>
+<th> Petal Length </th>
+<th> Sepal Length </th>
 </tr>
 <tr>
 <td>
@@ -66,13 +66,13 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 
 </td>
 </tr>
-</table>
+<tr>
+<th> Petal Width </th>
+<th> Sepal Width</th>
+</tr>
+<tr>
+<td>
 
-
-
-
-
-Petal Width:
 |       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
 |-------|---------------|-------------------|------------------|
 | count |         50    |             50    |            50    |
@@ -84,7 +84,9 @@ Petal Width:
 | 75%   |          0.3  |              1.5  |             2.3  |
 | max   |          0.6  |              1.8  |             2.5  |
 
-Sepal Width:
+</td>
+<td>
+
 |       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
 |-------|---------------|-------------------|------------------|
 | count |         50    |             50    |            50    |
@@ -95,6 +97,20 @@ Sepal Width:
 | 50%   |          3.4  |              2.8  |             3    |
 | 75%   |          3.68 |              3    |             3.18 |
 | max   |          4.4  |              3.4  |             3.8  |
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
 
 2. Generate histograms for each measurement
 3. Generate scatterplots / pairplots for all of the variables
