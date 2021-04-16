@@ -74,7 +74,8 @@ def insert_text(filename, content):
 
 def csv_to_df(filename, colnames):
 # Load csv data into pandas dataframe and name the columns; return the dataframe
-# Really just a call to pandas.read_csv but placed in a function to make future changes easier
+# Really just a call to pandas.read_csv with exception catching but placed in a 
+# function to make future changes easier
 
     try:
         df = pd.read_csv(filename, names=colnames)
@@ -84,3 +85,13 @@ def csv_to_df(filename, colnames):
 
     return df
 
+
+def df_to_csv(filename, df):
+# Write out a csv representation of a dataframe convenience function
+
+    try:
+        with open(filename, "w+") as f:
+            f.write(df.to_csv())
+
+    except IOError as e:
+        print(f"File error: {e}") 
