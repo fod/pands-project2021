@@ -27,34 +27,39 @@ def summarise(iris):
 
 
 
-def markdown_table(class_summaries):
+def output_table(class_summaries, fmt="md"):
 # Write class summaries to four markdown tables, one
 # for each measurement and each with a column for class
 
     # Tidy up the dataframe for a human readable table
     summaries_table = class_summaries.reset_index().rename(columns={"level_1":""})
 
-    tables = {}
-    # Get unique values for class (iris variety names)
-    for m in set(summaries_table["level_0"]):
+    if fmt == "md":
+        tables = {}
+        # Get unique values for class (iris variety names)
+        for m in set(summaries_table["level_0"]):
 
-        # Drop the measurement column as it just repeats the same value for each table
-        sub_table = summaries_table[summaries_table["level_0"] == m].drop("level_0", axis=1)
+            # Drop the measurement column as it just repeats the same value for each table
+            sub_table = summaries_table[summaries_table["level_0"] == m].drop("level_0", axis=1)
 
-        # Measurement name (table title)
-        md_table = sub_table.to_markdown(index=False, tablefmt="github")
-        table = md_table + "\n\n"
+            # Measurement name (table title)
+            md_table = sub_table.to_markdown(index=False, tablefmt="github")
+            table = md_table + "\n\n"
 
-        tables[m] = table
- 
+            tables[m] = table
+
+    elif fmt == "csv":
+        summaries_table = class_summaries.reset_index().rename(columns={"level_1":""})
+        tables = summaries_table.to_csv()
+
+    else:
+        print(f"Format {fmt} not supported.")
+        return
+    
     return tables
 
 
 
-
-
-# d = {"TABLE1": full_summary.to_markdown(tablefmt="github")}
-# insert_text("README.md", d)
 
 
 
@@ -90,9 +95,10 @@ def main():
     iris_path = "iris_data/bezdekIris.data"
     iris = csv_to_df(iris_path, colnames)
     full_summary, class_summaries = summarise(iris)
-    tables = markdown_table(class_summaries)
+    tables = output_table(class_summaries)
     tables["Full Summary"] = full_summary.to_markdown(tablefmt="github")
     insert_text("README.md", tables)
+    
     
 # Histogram, bee swarm, violin, box, ECDF, scatter
 # Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =
