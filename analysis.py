@@ -78,12 +78,10 @@ def main():
     # Insert the tables at the appropriate locations in README.md
     insert_text("README.md", tables)
 
-    
-    write_csv("output/full.csv", full_summary)
-    write_csv("output/class.csv", class_summaries)
-    #print(type(csv))
-    #print(full_summary.to_csv())
-    
+    # Save descriptive stats to csv files
+    df_to_csv("output/full.csv", full_summary)
+    df_to_csv("output/class.csv", class_summaries)
+
 # Histogram, bee swarm, violin, box, ECDF, scatter
 # Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =
 # variability due to codependence / independent variability
