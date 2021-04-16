@@ -91,6 +91,7 @@ def main():
     iris = csv_to_df(iris_path, colnames)
     full_summary, class_summaries = summarise(iris)
     tables = markdown_table(class_summaries)
+    tables["Full Summary"] = full_summary.to_markdown(tablefmt="github")
     insert_text("README.md", tables)
     
 # Histogram, bee swarm, violin, box, ECDF, scatter

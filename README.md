@@ -16,8 +16,18 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 1. Generate descriptive statistics for the dataset.
     [link](summary_stats.md)
 
-<!-- {% TABLE1 %} -->
+<!-- {% Full Summary %} -->
 
+|       |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width |
+|-------|----------------|---------------|----------------|---------------|
+| count |         150    |        150    |         150    |        150    |
+| mean  |           5.84 |          3.06 |           3.76 |          1.2  |
+| std   |           0.83 |          0.44 |           1.77 |          0.76 |
+| min   |           4.3  |          2    |           1    |          0.1  |
+| 25%   |           5.1  |          2.8  |           1.6  |          0.3  |
+| 50%   |           5.8  |          3    |           4.35 |          1.3  |
+| 75%   |           6.4  |          3.3  |           5.1  |          1.8  |
+| max   |           7.9  |          4.4  |           6.9  |          2.5  |
 
 <!-- {% END %} -->
 
