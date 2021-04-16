@@ -68,4 +68,16 @@ def insert_text(filename, content):
     except IOError as e:
         print(f"File error: {e}")
  
+
+def csv_to_df(filename, colnames):
+# Load csv data into pandas dataframe and name the columns; return the dataframe
+
+    try:
+        df = pd.read_csv(filename, names=colnames)
+
+    except IOError as e:
+        print(f"File error: {e}")
+
+    return df
+
 #full_summary.to_markdown(tablefmt="github")
