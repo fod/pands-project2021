@@ -31,24 +31,37 @@ def insert_text(filename, content):
     """
 
     try:
+        # fileinput.input(inplace=True) creates a line by line copy of the original then uses it 
+        # to replace the original. As the new file is being built up lines can be omitted or added
         with fileinput.input(files=filename, inplace=True) as f:
 
+            # Flag indicating that we are between a LABEL tag and an END tag
             del_old_lines = False
             for line in f:
 
+                # If we are between a LABEL and an END tag, see if we've reached the END tag and if not 
+                # carry on to the next line discarding the current one
                 if del_old_lines:
                     if re.search(r"{%\s*END\s*%}", line):
                         del_old_lines = False
-                        print(line, end="")                  
+                        print("\n" + line, end="")                  
                     continue
 
+                # Match the LABEL markers ('{%' and '%}') and capture the text inside them
                 match = re.search(r"{%(.*)%}", line)    # https://docs.python.org/3/howto/regex.html
 
-
+                # If a LABEL is found and that label exists in the content dict then keep the LABEL line
+                # and insert the relevant text from the content dict
                 if match and match.group(1).strip() in content:
                     print(line)
                     print(content[match.group(1).strip()])
+
+                    # All lines from here to the END tag are old content and should be removed 
+                    # so del_old_lines flag is activated
                     del_old_lines = True
+
+                # If no LABEL is found or a LABEL is found but there is not content for it in the content dict
+                # keep the current line and carry on    
                 else:
                     print(line, end="")
 
