@@ -18,25 +18,18 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 
 <!-- {% TABLE1 %} -->
 
-|       |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width |
-|-------|----------------|---------------|----------------|---------------|
-| count |         150    |        150    |         150    |        150    |
-| mean  |           5.84 |          3.06 |           3.76 |          1.2  |
-| std   |           0.83 |          0.44 |           1.77 |          0.76 |
-| min   |           4.3  |          2    |           1    |          0.1  |
-| 25%   |           5.1  |          2.8  |           1.6  |          0.3  |
-| 50%   |           5.8  |          3    |           4.35 |          1.3  |
-| 75%   |           6.4  |          3.3  |           5.1  |          1.8  |
-| max   |           7.9  |          4.4  |           6.9  |          2.5  |
+
 <!-- {% END %} -->
 
 <table>
 <tr>
 <th> Petal Length </th>
-<th> Sepal Length </th>
+<th> Petal Width </th>
 </tr>
 <tr>
 <td>
+
+<!-- {% Petal Length %} -->
 
 |       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
 |-------|---------------|-------------------|------------------|
@@ -49,29 +42,15 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 | 75%   |          1.58 |              4.6  |             5.88 |
 | max   |          1.9  |              5.1  |             6.9  |
 
+
+
+<!-- {% END %} -->
+
 </td>
 <td>
 
 
-|       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
-|-------|---------------|-------------------|------------------|
-| count |         50    |             50    |            50    |
-| mean  |          5.01 |              5.94 |             6.59 |
-| std   |          0.35 |              0.52 |             0.64 |
-| min   |          4.3  |              4.9  |             4.9  |
-| 25%   |          4.8  |              5.6  |             6.22 |
-| 50%   |          5    |              5.9  |             6.5  |
-| 75%   |          5.2  |              6.3  |             6.9  |
-| max   |          5.8  |              7    |             7.9  |
-
-</td>
-</tr>
-<tr>
-<th> Petal Width </th>
-<th> Sepal Width</th>
-</tr>
-<tr>
-<td>
+<!-- {% Petal Width %} -->
 
 |       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
 |-------|---------------|-------------------|------------------|
@@ -84,8 +63,40 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 | 75%   |          0.3  |              1.5  |             2.3  |
 | max   |          0.6  |              1.8  |             2.5  |
 
+
+
+<!-- {% END %} -->
+
+</td>
+</tr>
+<tr>
+<th> Sepal Length </th>
+<th> Sepal Width</th>
+</tr>
+<tr>
+<td>
+
+<!-- {% Sepal Length %} -->
+
+|       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
+|-------|---------------|-------------------|------------------|
+| count |         50    |             50    |            50    |
+| mean  |          5.01 |              5.94 |             6.59 |
+| std   |          0.35 |              0.52 |             0.64 |
+| min   |          4.3  |              4.9  |             4.9  |
+| 25%   |          4.8  |              5.6  |             6.22 |
+| 50%   |          5    |              5.9  |             6.5  |
+| 75%   |          5.2  |              6.3  |             6.9  |
+| max   |          5.8  |              7    |             7.9  |
+
+
+
+<!-- {% END %} -->
+
 </td>
 <td>
+
+<!-- {% Sepal Width %} -->
 
 |       |   Iris-setosa |   Iris-versicolor |   Iris-virginica |
 |-------|---------------|-------------------|------------------|
@@ -97,6 +108,10 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 | 50%   |          3.4  |              2.8  |             3    |
 | 75%   |          3.68 |              3    |             3.18 |
 | max   |          4.4  |              3.4  |             3.8  |
+
+
+
+<!-- {% END %} -->
 
 </td>
 </tr>

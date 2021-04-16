@@ -12,11 +12,8 @@ from analysis_util import *
 #import seaborn as sns
 
 
-
-
-
 def summarise(iris):
-# Summarise the dataframe; returns two datframes, one with descriptive statistics
+# Summarise the dataframe; returns two dataframes, one with descriptive statistics
 # relating to the entire dataset, and one grouped by iris variety
  
     # Generate full statistical summary of the dataset as pandas dataframe, 
@@ -37,15 +34,20 @@ def markdown_table(class_summaries):
     # Tidy up the dataframe for a human readable table
     summaries_table = class_summaries.reset_index().rename(columns={"level_1":""})
 
+    tables = {}
     # Get unique values for class (iris variety names)
     for m in set(summaries_table["level_0"]):
 
         # Drop the measurement column as it just repeats the same value for each table
         sub_table = summaries_table[summaries_table["level_0"] == m].drop("level_0", axis=1)
-        # Measurement name (table title)
-        table = f"{m}:\n{sub_table.to_markdown(index=False, tablefmt="github")}\n\n"
 
-        print(table)
+        # Measurement name (table title)
+        md_table = sub_table.to_markdown(index=False, tablefmt="github")
+        table = md_table + "\n\n"
+
+        tables[m] = table
+ 
+    return tables
 
 
 
@@ -87,8 +89,10 @@ def main():
     colnames = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "class"]
     iris_path = "iris_data/bezdekIris.data"
     iris = csv_to_df(iris_path, colnames)
-
-
+    full_summary, class_summaries = summarise(iris)
+    tables = markdown_table(class_summaries)
+    insert_text("README.md", tables)
+    
 # Histogram, bee swarm, violin, box, ECDF, scatter
 # Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =
 # variability due to codependence / independent variability

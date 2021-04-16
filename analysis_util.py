@@ -4,21 +4,15 @@
 
 import fileinput
 import re
+import pandas as pd
+
 
 def insert_text(filename, content):
-    """A simple templating system for updating text files. Intended mainly for inserting dynamically 
-       generated tables and text into Github README.md files.
+    """A simple templating system for updating text files. Intended mainly for inserting dynamically generated tables and text into Github README.md files.
 
-       The target text file should contain labels in the form '{% LABEL %}' and '{% END %}' wherever it
-       is intended that dynamically generated content will be inserted. The insert_text() function scans
-       the passed file for labels and when one is encountered the passed dictionary is searched for a key
-       matching the label. If the label exists the value for that label is inserted into the document. If 
-       content already exists between the {% LABEL %} and {% END %} it is removed.
+       The target text file should contain labels in the form '{% LABEL %}' and '{% END %}' wherever it is intended that dynamically generated content will be inserted. The insert_text() function scans the passed file for labels and when one is encountered the passed dictionary is searched for a key matching the label. If the label exists the value for that label is inserted into the document. If content already exists between the {% LABEL %} and {% END %} it is removed.
 
-       The labels are not replaced but remain in the target document so that dynamically generated content
-       can be updated whenever necessary. As such, it is recommended that the tags be placed in comments so
-       as not to be visible in the rendered document. In the case of Github README.md files, written in Github
-       Markdown, html comments are suggested, e.g.:
+       The labels are not replaced but remain in the target document so that dynamically generated content can be updated whenever necessary. As such, it is recommended that the tags be placed in comments so as not to be visible in the rendered document. In the case of Github README.md files, written in Github Markdown, html comments are suggested, e.g.:
 
                             `<!-- {% TABLE_1 %} -->
                             ...
@@ -26,8 +20,7 @@ def insert_text(filename, content):
 
     Args:
         filename (str): The full path to the file to be updated
-        content (dict): A dictionary of labels matching the templating labels in the target file, and content
-                        to be inserted
+        content (dict): A dictionary of labels matching the templating labels in the target file, and content to be inserted
     """
 
     try:
@@ -71,6 +64,7 @@ def insert_text(filename, content):
 
 def csv_to_df(filename, colnames):
 # Load csv data into pandas dataframe and name the columns; return the dataframe
+# Really just a call to pandas.read_csv but placed in a function to make future changes easier
 
     try:
         df = pd.read_csv(filename, names=colnames)
@@ -80,4 +74,3 @@ def csv_to_df(filename, colnames):
 
     return df
 
-#full_summary.to_markdown(tablefmt="github")
