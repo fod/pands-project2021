@@ -11,66 +11,82 @@ from analysis_util import *
 #import matplotlib.pyplot as pyplot
 #import seaborn as sns
 
-def get_iris_data():
-# load Fisher's iris data into pandas dataframe and name the columns; return the dataframe
-
-    try:
-        # Read iris data from csv file
-        iris = pd.read_csv("iris_databezdek/Iris.data", 
-        names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "class"])
-
-    except IOError as e:
-        print(f"File error: {e}")
-
-    return iris
-
-
-def describe():
-
-    
-# Generate full statistical summary of the dataset as pandas dataframe, 
-# rounding all numbers to 2 decimal places
-full_summary = iris.describe().round(decimals=2)
-
-# Descriptive statistics per class
-class_summaries = iris.groupby(iris["class"]).describe().round(decimals=2).transpose()
-
-
-d = {"TABLE1": full_summary.to_markdown(tablefmt="github")}
-insert_text("README.md", d)
 
 
 
-# Tidy up the dataframe for a human readable table
-summaries_table = class_summaries.reset_index().rename(columns={"level_1":""})
 
-try:
-    # Write class summaries to four markdown tables, one for each measurement and each with
-    # a column for class
-    with open("output/class_summaries.md", "w+") as md, open("output/class_summaries.csv", "w+") as csv:
+def summarise(iris):
+# Summarise the dataframe; returns two datframes, one with descriptive statistics
+# relating to the entire dataset, and one grouped by iris variety
+ 
+    # Generate full statistical summary of the dataset as pandas dataframe, 
+    # rounding all numbers to 2 decimal places
+    full_summary = iris.describe().round(decimals=2)
 
-        # Get unique values for class (iris variety names)
-        for m in set(summaries_table["level_0"]):
+    # Descriptive statistics per class, multilevel index consisting of measurement and statistic
+    class_summaries = iris.groupby(iris["class"]).describe().round(decimals=2).transpose()
 
-            # Drop the measurement column as it just repeats the same value for each table
-            sub_table = summaries_table[summaries_table["level_0"] == m].drop("level_0", axis=1)
-            # Measurement name (table title)
-            md.write(f"{m}:\n")
+    return (full_summary, class_summaries)
 
-            # Write markdown table for humans
-            md.write(sub_table.to_markdown(index=False, tablefmt="github"))
-            md.write("\n\n")
 
-            # Write csv table for other applications
-            csv.write(summaries_table.to_csv())
 
-except IOError as e:
-    print(f"File error: {e}")
+def markdown_table(class_summaries):
+# Write class summaries to four markdown tables, one
+# for each measurement and each with a column for class
+
+    # Tidy up the dataframe for a human readable table
+    summaries_table = class_summaries.reset_index().rename(columns={"level_1":""})
+
+    # Get unique values for class (iris variety names)
+    for m in set(summaries_table["level_0"]):
+
+        # Drop the measurement column as it just repeats the same value for each table
+        sub_table = summaries_table[summaries_table["level_0"] == m].drop("level_0", axis=1)
+        # Measurement name (table title)
+        table = f"{m}:\n{sub_table.to_markdown(index=False, tablefmt="github")}\n\n"
+
+        print(table)
+
+
+
+
+
+# d = {"TABLE1": full_summary.to_markdown(tablefmt="github")}
+# insert_text("README.md", d)
+
+
+
+
+
+# try:
+#     # Write class summaries to four markdown tables, one for each measurement and each with
+#     # a column for class
+#     with open("output/class_summaries.md", "w+") as md, open("output/class_summaries.csv", "w+") as csv:
+
+#         # Get unique values for class (iris variety names)
+#         for m in set(summaries_table["level_0"]):
+
+#             # Drop the measurement column as it just repeats the same value for each table
+#             sub_table = summaries_table[summaries_table["level_0"] == m].drop("level_0", axis=1)
+#             # Measurement name (table title)
+#             md.write(f"{m}:\n")
+
+#             # Write markdown table for humans
+#             md.write(sub_table.to_markdown(index=False, tablefmt="github"))
+#             md.write("\n\n")
+
+#             # Write csv table for other applications
+#             csv.write(summaries_table.to_csv())
+
+# except IOError as e:
+#     print(f"File error: {e}")
 
 
 
 def main():
-    pass
+    colnames = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "class"]
+    iris_path = "iris_data/bezdekIris.data"
+    iris = csv_to_df(iris_path, colnames)
 
 
 # Histogram, bee swarm, violin, box, ECDF, scatter
