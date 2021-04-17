@@ -173,3 +173,9 @@ Fisher, R.A. (1936). The use of multiple measurements in taxonomic problems, Ann
 
 https://stackoverflow.com/a/59852474 (markdown columns)
 https://pypi.org/project/tabulate/ (tablefmt option in pandas.DataFrame.to_markdown())
+https://seaborn.pydata.org/tutorial/data_structure.html --- long vs wide formats
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html --- dataframe.melt()
+https://www.opentechguides.com/how-to/article/pandas/193/index-slice-subset.html --- dataframe slicing
+https://towardsdatascience.com/7-points-to-create-better-histograms-with-seaborn-5fb542763169 --- histograms
+https://stackoverflow.com/a/31688467 --- On setting titles on facetgrids
+
