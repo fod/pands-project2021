@@ -1,6 +1,7 @@
 # Project specific
 papers/
 .vscode/
+proj1.pynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
