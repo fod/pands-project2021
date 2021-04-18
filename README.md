@@ -178,4 +178,4 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html --- 
 https://www.opentechguides.com/how-to/article/pandas/193/index-slice-subset.html --- dataframe slicing
 https://towardsdatascience.com/7-points-to-create-better-histograms-with-seaborn-5fb542763169 --- histograms
 https://stackoverflow.com/a/31688467 --- On setting titles on facetgrids
-
+https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html --- LDA and a trick
