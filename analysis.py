@@ -82,6 +82,8 @@ def main():
     df_to_csv("output/full.csv", full_summary)
     df_to_csv("output/class.csv", class_summaries)
 
+    insert_text("README.md", {"Iris Head": iris.head().to_markdown(tablefmt="github")})
+
 # Histogram, bee swarm, violin, box, ECDF, scatter
 # Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =
 # variability due to codependence / independent variability

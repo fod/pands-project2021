@@ -3,13 +3,24 @@
 HDip Data Analytics Programming and Scripting Project
 
 ## Introduction
-Fisher's Iris Data set is a collection of 50 observations of four measurements — sepal length, sepal width, petal length, and petal width from each of three plant species: *Iris setosa*, *I. versicolor*, and *I. virginica*. Two of these sets (*I. setosa* and *I. versicolor*) were collected from plants growing together in the same colony, while the third (*I. virginica*) was collected from elsewhere (Fisher, 1936). *I. setosa* is linearly separable from the other two species based on a function of the four measurements recorded whereas *I. vesicolor* and *I. virginica* are not (*ibid.*).
+Fisher's Iris Data set is a collection of 50 observations of four measurements — sepal length, sepal width, petal length, and petal width from each of three plant species: *Iris setosa*, *I. versicolor*, and *I. virginica*. Two of these sets (*I. setosa* and *I. versicolor*) were collected from plants growing together in the same colony, while the third (*I. virginica*) was collected from elsewhere (Fisher, 1936). *I. setosa* is linearly separable from the other two species based on some of the four measurements recorded whereas *I. vesicolor* and *I. virginica* are not (*ibid.*).
 
 ## Significance
 
 
 The dataset used for this project was downloaded from the UCI Machine Learning Repository (Dua and Graff, 2019)
 
+<!-- {% Iris Head %} -->
+
+|    |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width | class       |
+|----|----------------|---------------|----------------|---------------|-------------|
+|  0 |            5.1 |           3.5 |            1.4 |           0.2 | Iris-setosa |
+|  1 |            4.9 |           3   |            1.4 |           0.2 | Iris-setosa |
+|  2 |            4.7 |           3.2 |            1.3 |           0.2 | Iris-setosa |
+|  3 |            4.6 |           3.1 |            1.5 |           0.2 | Iris-setosa |
+|  4 |            5   |           3.6 |            1.4 |           0.2 | Iris-setosa |
+
+<!-- {% END %} -->
 
 ## Tasks
 ### EDA
@@ -179,3 +190,4 @@ https://www.opentechguides.com/how-to/article/pandas/193/index-slice-subset.html
 https://towardsdatascience.com/7-points-to-create-better-histograms-with-seaborn-5fb542763169 --- histograms
 https://stackoverflow.com/a/31688467 --- On setting titles on facetgrids
 https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html --- LDA and a trick
+https://www.machinecurve.com/index.php/2020/05/05/how-to-create-a-confusion-matrix-with-scikit-learn/ --- confusion matrix
