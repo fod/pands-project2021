@@ -55,7 +55,7 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 
 <!-- {% END %} -->
 
-<table>
+<table style="font-size: x-small;">
 <tr>
 <th> Petal Length </th>
 <th> Petal Width </th>
