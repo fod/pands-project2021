@@ -18,7 +18,7 @@ This project uses the Python programming language to perform some exploratory da
 ## How to run this project
 
 
-## 
+## Data preparation
 
 
 The dataset used for this project was downloaded from the UCI Machine Learning Repository (Dua and Graff, 2019)
@@ -151,7 +151,11 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 </tr>
 </table>
 
+<!-- {% HistogramGrid %} -->
 
+![Plot](hist_delme.png)
+
+<!-- {% END %} -->
 
 
 

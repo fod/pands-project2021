@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 import fileinput
 from analysis_util import insert_text, csv_to_df, df_to_csv
+from analysis_plots import *
 
 #import matplotlib.pyplot as pyplot
 #import seaborn as sns
@@ -84,6 +85,11 @@ def main():
 
     # Generate head() and insert into README
     insert_text("README.md", {"Iris Head": iris.head().to_markdown(tablefmt="github")})
+
+    # Generate histograms
+    iris_long = iris.melt(value_vars=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width"], id_vars="class")
+    histograms(iris_long)
+    insert_text("README.md", {"HistogramGrid": "![Plot](" + "hist_delme.png" + ")"})
 
 # Histogram, bee swarm, violin, box, ECDF, scatter
 # Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =
