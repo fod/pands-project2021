@@ -6,6 +6,10 @@ import fileinput
 import re
 import pandas as pd
 
+"""
+This file contains some functions that are both reusable in other projects
+and tangential to the main business of anlysing the Fisher's iris data set.
+"""
 
 def insert_text(filename, content):
     """A simple templating system for updating text files. Intended mainly for inserting 
@@ -87,7 +91,7 @@ def csv_to_df(filename, colnames):
 
 
 def df_to_csv(filename, df):
-# Write out a csv representation of a dataframe convenience function
+# Write out a csv representation of a dataframe -- convenience function
 
     try:
         with open(filename, "w+") as f:
@@ -95,3 +99,4 @@ def df_to_csv(filename, df):
 
     except IOError as e:
         print(f"File error: {e}") 
+
