@@ -153,7 +153,7 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 
 <!-- {% HistogramGrid %} -->
 
-![Plot](hist_delme.png)
+![HistogramGrid](output/histogram_grid.png)
 
 <!-- {% END %} -->
 

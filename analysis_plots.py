@@ -17,7 +17,7 @@ the main analysis file more manageable in terms of length and comlexity.
 """
 
 
-def histograms(data):
+def histograms(data=None, filename="", mean_lines=True):
     sns.set()
     g = sns.displot(data=data, 
                 x="value", 
@@ -41,12 +41,15 @@ def histograms(data):
 
     def vml(x, **kwargs):
         plt.axvline(np.mean(x), linestyle = '--', color = 'yellow', linewidth=2, label="mean=" + str(np.mean(x)))
+    if mean_lines:
+        g.map(vml, "value")
 
-    g.map(vml, "value")
     g.set_axis_labels("value (cm)")
     g.set_titles(col_template="{col_name}", row_template="{row_name}")
     g.despine(left=True)
-    g.savefig("hist_delme.png")
+    g.savefig(filename)
+
+
 
 def ecdfs():
     pass
