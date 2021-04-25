@@ -92,6 +92,10 @@ def main():
     # Generate long-form iris dataset
     iris_long = iris.melt(value_vars=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width"], id_vars="class")
 
+    # Generate head() and insert into README
+    insert_text("README.md", {"Long-form Head": iris_long.head().to_markdown(tablefmt="github")})
+
+
     # Generate histograms and insert into README
     histograms(data=iris_long, filename="output/histogram_grid.png")
     insert_text("README.md", {"HistogramGrid": "![HistogramGrid](" + "output/histogram_grid.png" + ")"})

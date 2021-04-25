@@ -59,7 +59,15 @@ The dataframe as described holds the data in 'wide' format, i.e. observations ar
 
 The pandas ```DataFrame.melt()``` method transforms a wide-form dataframe to a long form one by placing all of the values in one column and adding columns for the grouping variables ([REF](https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.melt.html)). The output of ```DataFrame.head()``` on the long-form dataframe is shown below:
 
-<!-- {% Long-form head %} -->
+<!-- {% Long-form Head %} -->
+
+|    | class       | variable     |   value |
+|----|-------------|--------------|---------|
+|  0 | Iris-setosa | Sepal Length |     5.1 |
+|  1 | Iris-setosa | Sepal Length |     4.9 |
+|  2 | Iris-setosa | Sepal Length |     4.7 |
+|  3 | Iris-setosa | Sepal Length |     4.6 |
+|  4 | Iris-setosa | Sepal Length |     5   |
 
 <!-- {% END %} -->
 
