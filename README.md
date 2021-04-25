@@ -5,15 +5,17 @@ HDip Data Analytics Programming and Scripting Project
 ## Introduction
 Fisher's Iris Data set is a collection of 50 observations of four measurements — sepal length, sepal width, petal length, and petal width from each of three plant species: *Iris setosa*, *I. versicolor*, and *I. virginica*. Two of these sets (*I. setosa* and *I. versicolor*) were collected from plants growing together in the same colony, while the third (*I. virginica*) was collected from elsewhere (Fisher, 1936). *I. setosa* is linearly separable from the other two species based on some of the four measurements recorded whereas *I. vesicolor* and *I. virginica* are not (*ibid.*).
 
-This project uses the Python programming language to perform some exploratory data analysis (EDA) on the iris dataset and to examine some approaches to data classification using Python libraries.
+This project uses the Python programming language to perform an exploratory data analysis (EDA) on the iris dataset and to examine some approaches to data classification using Python libraries.
 
 ## Requirements
 
-- Python 3.6
-- pandas
-- numpy
-- matplotlib
-- seaborn
+This project was made using the following:
+
+- Python 3.9.3
+- pandas 1.2.4
+- numpy 1.19.2
+- matplotlib 3.3.4
+- seaborn 0.11.1
 
 ## How to run this project
 
