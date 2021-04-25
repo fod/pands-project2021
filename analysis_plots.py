@@ -82,3 +82,9 @@ def stripplots():
 
 def catplots():
     pass
+
+def pairplots():
+    pass
+
+def jointplots():
+    pass
