@@ -71,10 +71,11 @@ The pandas ```DataFrame.melt()``` method transforms a wide-form dataframe to a l
 
 <!-- {% END %} -->
 
-## Tasks
-### EDA
-1. Generate descriptive statistics for the dataset.
-    [link](summary_stats.md)
+<hr>
+
+### Descriptive Statistics
+
+Descriptive statistics for the dataset can be generated using pandas ```DataFrame.describe()``` method. The count, mean standard deviation, min, max, median, and the first and third quartiles for each feature on the dataset as a whole are shown in the table below. The data in this table has also been output to [```output/full.csv```](output/full.csv) in csv format using the ```DataFrame.to_csv()``` method.
 
 <!-- {% Full Summary %} -->
 
@@ -90,6 +91,8 @@ The pandas ```DataFrame.melt()``` method transforms a wide-form dataframe to a l
 | max   |           7.9  |          4.4  |           6.9  |          2.5  |
 
 <!-- {% END %} -->
+
+
 
 <table style="font-size: x-small;">
 <tr>
