@@ -86,6 +86,9 @@ def main():
     # Generate head() and insert into README
     insert_text("README.md", {"Iris Head": iris.head().to_markdown(tablefmt="github")})
 
+    # Generate counts by class and insert into README
+    insert_text("README.md", {"Counts": iris.groupby("class").count().to_markdown(tablefmt="github")})
+
     # Generate long-form iris dataset
     iris_long = iris.melt(value_vars=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width"], id_vars="class")
 

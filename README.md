@@ -3,7 +3,7 @@
 HDip Data Analytics Programming and Scripting Project
 
 ## Introduction
-Fisher's Iris Data set is a collection of 50 observations of four measurements — sepal length, sepal width, petal length, and petal width from each of three plant species: *Iris setosa*, *I. versicolor*, and *I. virginica*. Two of these sets (*I. setosa* and *I. versicolor*) were collected from plants growing together in the same colony, while the third (*I. virginica*) was collected from elsewhere (Fisher, 1936). *I. setosa* is linearly separable from the other two species based on some of the four measurements recorded whereas *I. vesicolor* and *I. virginica* are not (*ibid.*).
+Fisher's Iris Data set is a collection of 50 observations of four measurements — sepal length, sepal width, petal length, and petal width from each of three plant species: *Iris setosa*, *I. versicolor*, and *I. virginica*. Two of these sets (*I. setosa* and *I. versicolor*) were collected from plants growing together in the same colony, while the third (*I. virginica*) was collected from a separate site (Fisher, 1936). *I. setosa* is linearly separable from the other two species based on some of the four measurements recorded whereas *I. vesicolor* and *I. virginica* are not (*ibid.*).
 
 This project uses the Python programming language to perform an exploratory data analysis (EDA) on the iris dataset and to examine some approaches to data classification using Python libraries.
 
@@ -39,7 +39,21 @@ The data is imported to a pandas DataFrame using ```pandas.read_csv()``` (REF). 
 
 <!-- {% END %} -->
 
+The data has been organised such that the values for each of the four features -- Sepal Length, Sepal Width, Petal Length, and Petal Width -- are held in their own columns, while a fifth column designates the class, or species. Calling ```iris["class"].unique()``` returns ```array(['Iris-setosa', 'Iris-versicolor', 'Iris-virginica'], dtype=object)```, demonstrating that the class column contains 3 unique values; Iris-setosa, Iris-versiolor, and Iris-virginica. Each row of the ```DataFrame``` represents a separate observation.
 
+Grouping the dataset by class shows there are 50 observations of each of the 4 variables for each class:
+
+```iris.groupby("class").count()```
+
+<!-- {% Counts %} -->
+
+| class           |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width |
+|-----------------|----------------|---------------|----------------|---------------|
+| Iris-setosa     |             50 |            50 |             50 |            50 |
+| Iris-versicolor |             50 |            50 |             50 |            50 |
+| Iris-virginica  |             50 |            50 |             50 |            50 |
+
+<!-- {% END %} -->
 
 ## Tasks
 ### EDA
