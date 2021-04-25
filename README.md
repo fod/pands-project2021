@@ -208,3 +208,5 @@ https://towardsdatascience.com/7-points-to-create-better-histograms-with-seaborn
 https://stackoverflow.com/a/31688467 --- On setting titles on facetgrids
 https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html --- LDA and a trick
 https://www.machinecurve.com/index.php/2020/05/05/how-to-create-a-confusion-matrix-with-scikit-learn/ --- confusion matrix
+
+https://stackoverflow.com/a/29814281 --- facetgrid title
