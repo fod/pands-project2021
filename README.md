@@ -92,9 +92,8 @@ Descriptive statistics for the dataset can be generated using pandas ```DataFram
 
 <!-- {% END %} -->
 
-
-
-<table style="font-size: x-small;">
+Rather than examining the descriptive statistics for the dataset as a whole, it can be more instructive to look at the same values for each subset of data. Below is a table for each of the four features -- petal length petal width, sepal length, and sepal width -- comparing the same statistics seen above for each of the three iris varieties.
+<table>
 <tr>
 <th> Petal Length </th>
 <th> Petal Width </th>
