@@ -25,7 +25,7 @@ This project was made using the following Python version and package versions:
 The dataset used for this project was downloaded from the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Iris/) (Dua and Graff, 2019).
 The data as downloaded consists of three files: [iris.data](iris_data/iris.data); the dataset as originally uploaded to the repository, [bezdekIris.data](iris_data/bezdekIris.data); the same data with some errors corrected (ibid.), and [iris.names](iris_data/iris.names); a description of the data along with some summary statistics noting, in particular, a high correlation between class and both petal length and petal width.
 
-The data is imported to a pandas DataFrame using ```pandas.read_csv()``` (REF). The output of a call to ```DataFrame.head()``` which returns the top five rows of a ```DataFrame``` (REF) is reproduced below:
+The data is imported to a pandas ```DataFrame``` (hereafter referred to informally as dataframe) using ```pandas.read_csv()``` (REF). The output of a call to ```DataFrame.head()``` which returns the top five rows of a dataframe (REF) is reproduced below:
 
 <!-- {% Iris Head %} -->
 
@@ -39,7 +39,7 @@ The data is imported to a pandas DataFrame using ```pandas.read_csv()``` (REF). 
 
 <!-- {% END %} -->
 
-The data has been organised such that the values for each of the four features -- Sepal Length, Sepal Width, Petal Length, and Petal Width -- are held in their own columns, while a fifth column designates the class, or species. Calling ```iris["class"].unique()``` returns ```array(['Iris-setosa', 'Iris-versicolor', 'Iris-virginica'], dtype=object)```, demonstrating that the class column contains 3 unique values; Iris-setosa, Iris-versiolor, and Iris-virginica. Each row of the ```DataFrame``` represents a separate observation.
+The data has been organised such that the values for each of the four features -- Sepal Length, Sepal Width, Petal Length, and Petal Width -- are held in their own columns, while a fifth column designates the class, or species. Calling ```iris["class"].unique()``` returns ```array(['Iris-setosa', 'Iris-versicolor', 'Iris-virginica'], dtype=object)```, demonstrating that the class column contains 3 unique values; Iris-setosa, Iris-versiolor, and Iris-virginica. Each row of the dataframe represents a separate observation.
 
 Grouping the dataset by class shows there are 50 observations of each of the 4 variables for each class:
 
@@ -52,6 +52,14 @@ Grouping the dataset by class shows there are 50 observations of each of the 4 v
 | Iris-setosa     |             50 |            50 |             50 |            50 |
 | Iris-versicolor |             50 |            50 |             50 |            50 |
 | Iris-virginica  |             50 |            50 |             50 |            50 |
+
+<!-- {% END %} -->
+
+The dataframe as described holds the data in 'wide' format, i.e. observations are in rows and variables are in columns, each row holding observations for a number of variables ([REF](https://seaborn.pydata.org/tutorial/data_structure.html)). This is a useful format for some applications and it is certainly a good compact and intuitive format for visual examination; however, it will also be necessary to generate a 'long' format dataframe, in which each row contains just a single observation. This format is often more flexible for plotting as columns can simply be assigned to, for instance, x-axis, y-axis, colour, etc. There are cases where one is more convenient than the other and both are used here.
+
+The pandas ```DataFrame.melt()``` method transforms a wide-form dataframe to a long form one by placing all of the values in one column and adding columns for the grouping variables ([REF](https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.melt.html)). The output of ```DataFrame.head()``` on the long-form dataframe is shown below:
+
+<!-- {% Long-form head %} -->
 
 <!-- {% END %} -->
 
