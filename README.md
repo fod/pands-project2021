@@ -9,7 +9,7 @@ This project uses the Python programming language to perform an exploratory data
 
 ## Requirements
 
-This project was made using the following:
+This project was made using the following Python version and package versions:
 
 - Python 3.9.3
 - pandas 1.2.4
@@ -22,8 +22,10 @@ This project was made using the following:
 
 ## Data preparation
 
+The dataset used for this project was downloaded from the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Iris/) (Dua and Graff, 2019).
+The data as downloaded consists of three files: [iris.data](iris_data/iris.data); the dataset as originally uploaded to the repository, [bezdekIris.data](iris_data/bezdekIris.data); the same data with some errors corrected (ibid.), and [iris.names](iris_data/iris.names); a description of the data along with some summary statistics noting, in particular, a high correlation between class and both petal length and petal width.
 
-The dataset used for this project was downloaded from the UCI Machine Learning Repository (Dua and Graff, 2019)
+The data is imported to a pandas DataFrame using ```pandas.read_csv()``` (REF). The output of a call to ```DataFrame.head()``` which returns the top five rows of a ```DataFrame``` (REF) is reproduced below:
 
 <!-- {% Iris Head %} -->
 
@@ -36,6 +38,8 @@ The dataset used for this project was downloaded from the UCI Machine Learning R
 |  4 |            5   |           3.6 |            1.4 |           0.2 | Iris-setosa |
 
 <!-- {% END %} -->
+
+
 
 ## Tasks
 ### EDA
