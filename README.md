@@ -97,7 +97,7 @@ Some useful information can be gleaned from this table even before the data is b
 1. Sepals, with mean dimensions of 5.84cm x 3.06cm tend to be considerably larger than petals (3.76 x 1.2).
 2. Petal size, on the other hand is much more variable than sepal size, as indicated both by the petal length standard deviation (1.77), and the range of petal lengths(6.9 - 1 = 5.9cm) versus the range of sepal lengths (7.9 - 4.3 = 3.6cm; standard deviation 0.83).
 
-Based on the observations made above, and assuming the high variability in petal size is at least partially contingent on iris species, it seems likely that petal dimension will be more useful in classifying iris samples than sepal dimension. One way of testing that hypothesis, and of generally learning more about the data, is to produce the same descriptive statistics broken down by class (i.e. iris variety). This is achieved using pandas ```DataFrame.groupby()``` method. The resulting tables appear below. Each table represents one of the four observed features (lengths and widths of petals and sepals), and each column of each table represents one of the three classes (*I. setosa*, *I. versicolor*, and *I. virginica*). The rows contain the same descriptive statistics as in the table above, for each combination of feature and class.
+Based on the observations made above, and assuming that the high variability in petal size is at least partially contingent on iris species, it seems likely that petal dimension will be more useful in classifying iris samples than sepal dimension. One way of testing that hypothesis, and of generally learning more about the data, is to produce the same descriptive statistics broken down by class (i.e. iris variety). This is achieved using pandas ```DataFrame.groupby()``` method. The resulting tables appear below. Each table represents one of the four observed features (lengths and widths of petals and sepals), and each column of each table represents one of the three classes (*I. setosa*, *I. versicolor*, and *I. virginica*). The rows contain the same descriptive statistics as in the table above, for each combination of feature and class.
 
 <table>
 <tr>
@@ -194,6 +194,13 @@ Based on the observations made above, and assuming the high variability in petal
 </td>
 </tr>
 </table>
+
+The hypothesis posited above regarding the suitability of petal dimensions in classifying iris species is borne out by the class-grouped statistics. Here we can see that there is a considerable gap between both the mean petal widths, and the mean petal lengths of *I. setosa* and the other two classes. Looking first at petal length; *I. setosa* shows a mean of 1.46cm against 4.26cm and 5.55cm for *I. versicolor* and *I. virginica* respectively. 
+
+
+<hr>
+
+### Visualisation
 
 It is helpful to visualise the data beyond simple tables. The seaborn library (REF), which is built on matplotlib (REF) offers a powerful and flexible interface for data visualisation. Below is a collection of histograms -- one for each feature/class combination in the iris dataset. These histograms enable the rapid examination of the general structure and distribution of the data. It is possible to link the histograms in grids such as these so that, for instance, common bins are used for all or some subsets of the histograms, or that the x- and/or y-axis scales are shared amongst all of the histograms or over rows or columns. The histograms below are intended to be viewed in isolation. x- and y-axis scales are not shared, and bins are calculated for each subset of data visualised in each histogram. As such, they show the distribution of each subset but they do not really offer any insight into the relationships between features.
 
