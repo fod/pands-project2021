@@ -73,6 +73,23 @@ def histograms(data=None, filename="", mean_lines=True, title=None):
     g.savefig(filename)
 
 
+def histograms_stacked():
+    sns.set_theme(style="white")
+    sns.displot(data=iris_long, 
+            x="value", 
+            #row="class",
+            multiple="stack",
+            hue="class",
+            col="variable", 
+            kind="hist", 
+            kde=False, 
+            common_bins=True, 
+            col_wrap=2,
+            facet_kws=dict(sharex=False, 
+                           sharey=False,
+                           margin_titles=True)
+           )
+
 
 def ecdfs():
     pass
