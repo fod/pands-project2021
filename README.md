@@ -209,9 +209,9 @@ Descriptive statistics, as demonstrated above, can be powerful summarisers of a 
 
 The Seaborn library (REF), which is built on Matplotlib (REF) offers a powerful and flexible interface for data visualisation. Below is a collection of histograms -- one for each feature/class combination in the iris dataset. These histograms enable the rapid examination of the general structure and distribution of the data. It is possible to link the histograms in grids such as these so that, for instance, common bins are used for all or some subsets of the histograms, or that the x- and/or y-axis scales are shared amongst all of the histograms or over rows or columns. The histograms below are intended to be viewed in isolation. x- and y-axis scales are not shared, and bins are calculated for each subset of the data visualised in each histogram. As such, they show the distribution of each subset, but they do not really offer any insight into the relationships between features.
 
-<!-- {% HistogramGrid %} -->
+<!-- {% Stacked Histograms %} -->
 
-![HistogramGrid](output/histogram_grid.png)
+![Stacked Histograms](output/histograms_stacked.png)
 
 <!-- {% END %} -->
 

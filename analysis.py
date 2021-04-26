@@ -100,7 +100,7 @@ def main():
     histograms(data=iris_long, 
                filename="output/histograms_stacked.png", 
                title="Stacked Feature Histograms for each Iris Species")
-    insert_text("README.md", {"HistogramGrid": "![HistogramGrid](" + "output/histogram_grid.png" + ")"})
+    insert_text("README.md", {"Stacked Histograms": "![Stacked Histograms](" + "output/histograms_stacked.png" + ")"})
 
 
 # Histogram, bee swarm, violin, box, ECDF, scatter
