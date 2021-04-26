@@ -97,8 +97,11 @@ def main():
 
 
     # Generate histograms and insert into README
-    histograms(data=iris_long, filename="output/histogram_grid.png")
+    histograms(data=iris_long, 
+               filename="output/histograms_stacked.png", 
+               title="Stacked Feature Histograms for each Iris Species")
     insert_text("README.md", {"HistogramGrid": "![HistogramGrid](" + "output/histogram_grid.png" + ")"})
+
 
 # Histogram, bee swarm, violin, box, ECDF, scatter
 # Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =
