@@ -75,7 +75,7 @@ The pandas ```DataFrame.melt()``` method transforms a wide-form dataframe to a l
 
 ### Descriptive Statistics
 
-Descriptive statistics for the dataset can be generated using pandas ```DataFrame.describe()``` method. The count, mean standard deviation, min, max, median, and the first and third quartiles for each feature on the dataset as a whole are shown in the table below. The data in this table has also been output to [```output/full.csv```](output/full.csv) in csv format using the ```DataFrame.to_csv()``` method.
+Descriptive statistics for the dataset can be generated using pandas ```DataFrame.describe()``` method. The count, mean, standard deviation, minimum value, maximum value, the median, and the first and third quartiles for each feature are calculated for the dataset as a whole. The result is shown in the table below. The data in this table has also been output to [```output/full.csv```](output/full.csv) in csv format using the ```DataFrame.to_csv()``` method.
 
 <!-- {% Full Summary %} -->
 
@@ -91,6 +91,13 @@ Descriptive statistics for the dataset can be generated using pandas ```DataFram
 | max   |           7.9  |          4.4  |           6.9  |          2.5  |
 
 <!-- {% END %} -->
+
+Some useful information can be gleaned from this table even before the data is broken down by class for a finer-grained examination. some observations that can be made are:
+
+1. Sepals, with mean dimensions of 5.84cm x 3.06cm tend to be considerably larger than petals (3.76 x 1.2).
+2. Petal size, on the other hand is much more variable than sepal size, as indicated both by the petal length standard deviation (1.77), and the range of petal lengths(6.9 - 1 = 5.9cm) versus the range of sepal lengths (7.9 - 4.3 = 3.6cm; standard deviation 0.83).
+
+Based on the observations made above, and assuming the high variability in petal size is at least partially contingent on iris species, it seems likely that petal dimensions will be more useful in classifying iris samples than sepal dimensions.
 
 Rather than examining the descriptive statistics for the dataset as a whole, it can be more instructive to look at the same values for each subset of data. Below is a table for each of the four features -- petal length petal width, sepal length, and sepal width -- comparing the same statistics seen above for each of the three iris varieties.
 <table>
