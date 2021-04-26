@@ -31,6 +31,7 @@ def histograms(data=None, filename=None, title=None):
                 kind="hist", 
                 kde=False, 
                 common_bins=True, 
+                col_wrap=2,
                 facet_kws=dict(sharex=False, 
                             sharey=True,
                             margin_titles=True)
