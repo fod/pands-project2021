@@ -56,8 +56,8 @@ def ecdfs():
 def stripplots():
     pass
 
-def catplots():
-    sns.catplot(data=iris_long, 
+def catplots(data=None):
+    sns.catplot(data=data, 
                 x="value", 
                 y="class", 
                 col="variable", 
