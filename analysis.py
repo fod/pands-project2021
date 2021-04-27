@@ -95,19 +95,20 @@ def main():
     # Generate head() and insert into README
     insert_text("README.md", {"Long-form Head": iris_long.head().to_markdown(tablefmt="github")})
 
-
     # Generate histograms and insert into README
     histograms(data=iris_long, 
                filename="output/histograms_stacked.png", 
                title="Stacked Feature Histograms for each Iris Species")
-    insert_text("README.md", {"Stacked Histograms": "![Stacked Histograms](" + "output/histograms_stacked.png" + ")"})
+    insert_text("README.md", 
+               {"Stacked Histograms": "![Stacked Histograms](" + "output/histograms_stacked.png" + ")"})
   
+    # Generate boxplots and insert into README
+    catplots(data=iris_long, 
+             filename="output/boxplots.png", 
+             title="Comparison of Features per Class Using Boxplots")
+    insert_text("README.md", 
+                {"Boxplots": "![Boxplots](" + "output/boxplots.png" + ")"})
 
-# Histogram, bee swarm, violin, box, ECDF, scatter
-# Correlation, covariance, ρ (Pearson correlation): covariance/(std(x))(std(y)) =
-# variability due to codependence / independent variability
-
-# Probability of misclassification
 
 
 if __name__ == "__main__":
