@@ -37,17 +37,28 @@ def histograms(data=None, filename=None, title=None):
                             margin_titles=True)
             )
 
-    h.set_axis_labels("value (cm)")
-    h.set_titles(col_template="{col_name}", row_template="{row_name}")
+    label_grid(h, axis_labels="value (cm)", 
+                  title="Stacked Feature Histograms for each Iris Species")
 
-    # Add grid title if one has been specified
-    if title:
-        h.fig.subplots_adjust(top=0.85)
-        h.fig.suptitle(title)
-    
     # Save to specified path
     if filename:
         h.savefig(filename)
+
+
+def label_grid(grid, axis_labels=None, title=None):
+# Helper function for labeling axes and titling Seaborn facetgrids
+
+    # Set subplot titles
+    grid.set_titles(col_template="{col_name}", row_template="{row_name}")
+
+    # Set axis labels if provided
+    if axis_labels:
+        grid.set_axis_labels(axis_labels)
+
+    # Set grid title if provided    
+    if title:
+        grid.fig.subplots_adjust(top=0.85)
+        grid.fig.suptitle(title)
 
 
 def ecdfs():
@@ -56,13 +67,22 @@ def ecdfs():
 def stripplots():
     pass
 
-def catplots(data=None):
-    sns.catplot(data=data, 
+def catplots(data=None, filename=None, title=None):
+    h = sns.catplot(data=data, 
                 x="value", 
                 y="class", 
                 col="variable", 
                 kind="box", 
                 sharex=False)
+
+    # Add title if one has been specified
+    if title:
+        h.fig.suptitle(title)
+    
+    # Save to specified path
+    if filename:
+        h.savefig(filename)
+
 
 def pairplots():
     pass
