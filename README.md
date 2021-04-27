@@ -215,7 +215,7 @@ The Seaborn library (REF), which is built on Matplotlib (REF) offers a powerful 
 
 <!-- {% END %} -->
 
-It is clear from the upper histograms that there is little correlation between sepal dimensions and class. The petal length and width histograms, on the other hand, clearly show that there is no overlap between the petal dimensions of *I. setosa* and those of the other two classes. Some overlap is evident between *I. versicolor* and *I. virginica* in terms of petal length and width but, especially in the case of petal width, the overlap is minimal, pointing to a high degree of correlation between the class and those two variables.
+It is clear from the upper histograms that there is little correlation between sepal dimension and class. The petal length and width histograms, on the other hand, clearly show that there is no overlap between the petal dimensions of *I. setosa* and those of the other two classes. Some overlap is evident between *I. versicolor* and *I. virginica* in terms of petal length and width but, especially in the case of petal width, the overlap is minimal, pointing to a high degree of correlation between the class and those two variables.
 
 
 

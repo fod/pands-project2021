@@ -57,7 +57,12 @@ def stripplots():
     pass
 
 def catplots():
-    pass
+    sns.catplot(data=iris_long, 
+                x="value", 
+                y="class", 
+                col="variable", 
+                kind="box", 
+                sharex=False)
 
 def pairplots():
     pass
