@@ -218,31 +218,66 @@ The Seaborn library (REF), which is built on Matplotlib (REF) offers a powerful 
 It is clear from the upper histograms that there is little correlation between sepal dimension and class. The petal length and width histograms, on the other hand, clearly show that there is no overlap between the petal dimensions of *I. setosa* and those of the other two classes. Some overlap is evident between *I. versicolor* and *I. virginica* in terms of petal length and width but, especially in the case of petal width, the overlap is minimal, pointing to a high degree of correlation between the class and those two variables.
 
 
+<!-- {% Boxplot %} -->
 
 
 
+<!-- {% END %} -->
 
 
-3. Generate scatterplots / pairplots for all of the variables
-4. Examine some other descriptive plots:
-    1. Box plot
-    2. Violin plot
-    3. Bee swarm plot
-    4. Empirical Cumulative Distribution Function (eCDF)
+<!-- {% Stripplot %} -->
 
-### Visualisation of Descriptive Statistics
+
+
+<!-- {% END %} -->
+
 
 ### Visualisation of Relationships
+
 
 ### Correlation
 1. Covariance
 2. ρ (Pearson correlation)
 3. Variability due to codependence / independent variability
 
+
+<!-- {% Pairplot %} -->
+
+
+
+<!-- {% END %} -->
+
+
+<!-- {% Classification Petal %} -->
+
+
+
+<!-- {% END %} -->
+
+<!-- {% Classification Sepal %} -->
+
+
+
+<!-- {% END %} -->
+
+
+
+
 ### Separation improvement
+
+<!-- {% Classification Area %} -->
+
+
+
+<!-- {% END %} -->
+
 1. Dimensionality reduction
     1. LDA
     2. PCA
+    3. Area
+
+
+## Further Study
 
 ### Uncertainty measurement
 1. Probability of misclassification
