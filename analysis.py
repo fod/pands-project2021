@@ -103,7 +103,7 @@ def main():
                {"Stacked Histograms": "![Stacked Histograms](" + "output/histograms_stacked.png" + ")"})
   
     # Generate boxplots and insert into README
-    catplots(data=iris_long, 
+    boxplots(data=iris_long, 
              filename="output/boxplots.png", 
              title="Comparison of Features per Class Using Boxplots")
     insert_text("README.md", 

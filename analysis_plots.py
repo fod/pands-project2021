@@ -34,12 +34,13 @@ def label_grid(grid, axis_labels=None, title=None, grid_titles=False):
 
 
 def histograms(data=None, filename=None, title=None):
-# generate stacked histograms from the passed long-form dataframe
+# Generate stacked histograms from the passed long-form dataframe
 
     # Select a clean minimal Seaborn theme
     sns.set_theme(style="white")
 
     # displot is a seaborn function for generating multiple faceted distribution plots
+    # See: https://seaborn.pydata.org/generated/seaborn.displot.html
     h = sns.displot(data=data, 
                 x="value", 
                 multiple="stack",
@@ -63,7 +64,9 @@ def histograms(data=None, filename=None, title=None):
         h.savefig(filename)
 
 
-def catplots(data=None, filename=None, title=None):
+def boxplots(data=None, filename=None, title=None):
+#  
+
     h = sns.catplot(data=data, 
                 x="value", 
                 y="class", 
