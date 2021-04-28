@@ -127,7 +127,9 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
                       y=y, 
                       hue="class", 
                       kind="scatter",
-                      s=15) 
+                      s=15,
+                      # Preserve colours used in other plots for versicolor and virginica
+                      palette=[sns.color_palette()[1],sns.color_palette()[2]]) 
 
     # Overlay the second dataset
     # Specifically in this case draw red circles around passed points
