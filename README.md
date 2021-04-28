@@ -19,6 +19,17 @@ This project was made using the following Python version and package versions:
 
 ## How to run this project
 
+The code in this project is spread over three files:
+
+1. [analysis.py](analysis.py). This file contains the main project code. It consists of three functions:  
+   
+   i. ```summarise()```, which produces descriptive statistics for the dataset as a whole and for the dataset broken down by class (iris variety),
+   
+   ii. ```output_table()```, which produces a dict of Github markdown formatted tables containing the descriptive statistics produced by ```summarise()``` above, and
+   
+   iii. ```main()```, which consists of a series of commands -- primarily calling on functions defined in [```analysis_util.py```](analysis_util.py) and [```analysis_plots.py```](analysis_plots.py) -- to manipulate the data, generate plots, and write the result to this README file.
+
+
 
 ## Data preparation
 
