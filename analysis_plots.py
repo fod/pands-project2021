@@ -83,7 +83,7 @@ def stripplot(data=None, title=None, filename=None):
 # Stripplot
 
     plt.clf()
-    sns.set_style("white")
+    sns.set_style("whitegrid")
     h = sns.stripplot(data=data, 
                       y="value", 
                       x="variable", 
