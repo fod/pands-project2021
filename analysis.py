@@ -177,6 +177,19 @@ def main():
     insert_text("README.md", 
                 {"Classification Area": "![Classification Area](" + "output/scatter_area.png" + ")"})
 
+
+    # Generate ECDF Plots
+
+    ecdfs(data=iris_long,
+          x="value",
+          col="variable",
+          title="Empirical Cumulative Distribution Function (ECDF)",
+          filename="output/ecdf.png")
+
+    insert_text("README.md", 
+                {"ECDF": "![ECDF](" + "output/ecdf.png" + ")"})
+
+
 if __name__ == "__main__":
     main()
 

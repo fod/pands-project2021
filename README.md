@@ -232,6 +232,13 @@ It is clear from the upper histograms that there is little correlation between s
 <!-- {% END %} -->
 
 
+<!-- {% ECDF %} -->
+
+![ECDF](output/ecdf.png)
+
+<!-- {% END %} -->
+
+
 ### Visualisation of Relationships
 
 

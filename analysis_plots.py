@@ -132,9 +132,32 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
 
 
 
-def ecdfs():
-    pass
+def ecdfs(data=None, x=None, col=None, title=None, filename=None):
 
+    sns.set_style("whitegrid")
+
+    g = sns.displot(data=data, 
+                    x=x, 
+                    col=col, 
+                    hue="class", 
+                    kind="ecdf", 
+                    linewidth=2, 
+                    facet_kws=dict(sharex=False),
+                    col_wrap=2)
+
+    def vertical_line(x, **kwargs):
+        for n in (x[:50], x[50:100], x[100:]):
+            plt.axvline(np.max(n), linestyle = '--', color = 'red', linewidth=1, label="Max")
+            # plt.axvline(np.min(n), linestyle = '--', color = 'pink', linewidth=2, label="Min")
+
+    g.map(vertical_line, "value")
+    g.set_ylabels("proportion")
+    label_grid(g, "value (cm)", title)
+
+    # Save to specified path
+    if filename:
+        plt.tight_layout()
+        plt.savefig(filename)
 
 
 def pairplots():
