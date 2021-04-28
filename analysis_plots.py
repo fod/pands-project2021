@@ -16,11 +16,12 @@ Keeping these functions in a dedicated plots file will hopefully keep
 the main analysis file more manageable in terms of length and comlexity.
 """
 
-def label_grid(grid, axis_labels=None, title=None):
+def label_grid(grid, axis_labels=None, title=None, grid_titles=False):
 # Helper function for labeling axes and titling Seaborn facetgrids
 
     # Set subplot titles
-    grid.set_titles(col_template="{col_name}", row_template="{row_name}")
+    if grid_titles:
+        grid.set_titles(col_template="{col_name}", row_template="{row_name}")
 
     # Set axis labels if provided
     if axis_labels:
@@ -28,7 +29,7 @@ def label_grid(grid, axis_labels=None, title=None):
 
     # Set grid title if provided    
     if title:
-        grid.fig.subplots_adjust(top=0.85)
+        grid.fig.subplots_adjust(top=0.9)
         grid.fig.suptitle(title)
 
 
@@ -164,10 +165,7 @@ def pairplots(data=None, title=None, filename=None):
     
     g = sns.pairplot(data, hue="class", kind="scatter")
 
-    # Set title if specified
-    if title:                  
-        g.fig.subplots_adjust(top=0.95)
-        g.fig.suptitle(title)
+    label_grid(g, title=title)
 
     # Save to specified path
     if filename:
