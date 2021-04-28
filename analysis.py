@@ -5,9 +5,13 @@
 # Imports
 import pandas as pd
 import numpy as np
+
+# analysis_util provides a templating system to populate README.md 
+# and some data conversion functions
 from analysis_util import insert_text, csv_to_df, df_to_csv
-from analysis_plots import histograms, boxplots, stripplot, 
-                           scatterplot, ecdfs, pairplots
+
+# analysis_plots provides all of the plotting code for this project
+from analysis_plots import histograms, boxplots, stripplot, scatterplot, ecdfs, pairplots
 
 
 def summarise(iris):
