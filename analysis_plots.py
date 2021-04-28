@@ -107,14 +107,15 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
                       x=x, 
                       y=y, 
                       hue="class", 
-                      kind="scatter") 
+                      kind="scatter",
+                      s=15) 
 
     if overlay:
         g.ax_joint.scatter(overlay["x"], 
                            overlay["y"], 
                            facecolors='none', 
                            edgecolors='red', 
-                           s=100, 
+                           s=30, 
                            label=overlay["label"], 
                            alpha=0.5)
 
