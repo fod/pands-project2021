@@ -258,14 +258,14 @@ It is clear from the upper histograms that there is little correlation between s
 
 <!-- {% Classification Petal %} -->
 
-![Classification Petal](output/scatter_petal.png)
+<img src="output/scatter_petal.png" height=500>
 
 <!-- {% END %} -->
 
 
 <!-- {% Classification Sepal %} -->
 
-![Classification Sepal](output/scatter_sepal.png)
+<img src="output/scatter_sepal.png" height=500>
 
 <!-- {% END %} -->
 
@@ -276,7 +276,7 @@ It is clear from the upper histograms that there is little correlation between s
 
 <!-- {% Classification Area %} -->
 
-<img src="output/scatter_area.png" height="500">
+<img src="output/scatter_area.png" height=500>
 
 <!-- {% END %} -->
 

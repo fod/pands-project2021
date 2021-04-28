@@ -146,7 +146,7 @@ def main():
                 filename="output/scatter_petal.png")
 
     insert_text("README.md", 
-                {"Classification Petal": "![Classification Petal](" + "output/scatter_petal.png" + ")"})
+                {"Classification Petal": '<img src="' + 'output/scatter_petal.png"' + ' height=500>'})
 
     # Generate Sepal scatterplot
     scatterplot(data=iris_sub, 
@@ -159,7 +159,7 @@ def main():
                 filename="output/scatter_sepal.png")
 
     insert_text("README.md", 
-                {"Classification Sepal": "![Classification Sepal](" + "output/scatter_sepal.png" + ")"})
+                {"Classification Sepal": '<img src="' + 'output/scatter_sepal.png"' + ' height=500>'})
 
     # Add area columns to iris dataframe
     iris["Sepal Area"] = iris["Sepal Length"] * iris["Sepal Width"]
@@ -185,7 +185,7 @@ def main():
                 filename="output/scatter_area.png")
 
     insert_text("README.md", 
-                {"Classification Area": "![Classification Area](" + "output/scatter_area.png" + ")"})
+                {"Classification Area": '<img src="' + 'output/scatter_area.png"' + ' height=500>'})
 
 
     # Generate ECDF Plots
