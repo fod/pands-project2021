@@ -122,7 +122,7 @@ def main():
                      (iris["Petal Width"] >= 1.4) & 
                      (iris["Petal Width"] <= 1.8)]
 
-    # Generate scatterplot
+    # Generate Petal scatterplot
     scatterplot(data=iris, 
                 x="Petal Length", 
                 y="Petal Width", 
@@ -133,6 +133,18 @@ def main():
                 filename="output/scatter_petal.png")
     insert_text("README.md", 
                 {"Classification Petal": "![Classification Petal](" + "output/scatter_petal.png" + ")"})
+
+    # Generate Petal scatterplot
+    scatterplot(data=iris, 
+                x="Sepal Length", 
+                y="Sepal Width", 
+                overlay_data={"x": iris_rule["Sepal Length"],
+                              "y": iris_rule["Sepal Width"],
+                              "label": "Difficult to classify"},
+                title="Sepal Length x Sepal Width with Difficult-to-Classify Observations Highlighted",
+                filename="output/scatter_sepal.png")
+    insert_text("README.md", 
+                {"Classification Sepal": "![Classification Sepal](" + "output/scatter_sepal.png" + ")"})
 
 
 if __name__ == "__main__":

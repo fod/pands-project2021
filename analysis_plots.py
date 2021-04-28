@@ -101,7 +101,10 @@ def stripplot(data=None, title=None, filename=None):
 
 def scatterplot(data=None, x=None, y=None, overlay_data=None, title=None, filename=None):
     plt.clf()
+    sns.set()
     sns.set_style("white")
+    #sns.set(rc={'figure.figsize':(8,8)})
+    plt.rcParams['figure.figsize'] = (8,8)
     h = sns.scatterplot(data=data, 
                         x=x, 
                         y=y, 

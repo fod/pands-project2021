@@ -257,7 +257,7 @@ It is clear from the upper histograms that there is little correlation between s
 
 <!-- {% Classification Sepal %} -->
 
-
+![Classification Sepal](output/scatter_sepal.png)
 
 <!-- {% END %} -->
 
