@@ -227,7 +227,7 @@ It is clear from the upper histograms that there is little correlation between s
 
 <!-- {% Stripplot %} -->
 
-
+![Stripplot](output/stripplot.png)
 
 <!-- {% END %} -->
 

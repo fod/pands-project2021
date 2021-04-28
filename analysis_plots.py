@@ -80,7 +80,8 @@ def catplots(data=None, filename=None, title=None):
 
 
 # Stripplot
-def stripplot(data=None, title=None):
+def stripplot(data=None, title=None, filename=None):
+    plt.clf()
     sns.set_style("white")
     h = sns.stripplot(data=data, 
                       y="value", 
@@ -95,7 +96,7 @@ def stripplot(data=None, title=None):
 
     # Save to specified path
     if filename:
-        h.savefig(filename)
+        plt.savefig(filename)
 
 
 def ecdfs():
