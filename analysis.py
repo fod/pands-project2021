@@ -122,8 +122,11 @@ def main():
                      (iris["Petal Width"] >= 1.4) & 
                      (iris["Petal Width"] <= 1.8)]
 
+    # Remove easily classified I. setosa from dataframe
+    iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
+
     # Generate Petal scatterplot
-    scatterplot(data=iris, 
+    scatterplot(data=iris_sub, 
                 x="Petal Length", 
                 y="Petal Width", 
                 overlay={"x": iris_rule["Petal Length"],
@@ -136,7 +139,7 @@ def main():
                 {"Classification Petal": "![Classification Petal](" + "output/scatter_petal.png" + ")"})
 
     # Generate Sepal scatterplot
-    scatterplot(data=iris, 
+    scatterplot(data=iris_sub, 
                 x="Sepal Length", 
                 y="Sepal Width", 
                 overlay={"x": iris_rule["Sepal Length"],
@@ -158,8 +161,11 @@ def main():
                      (iris["Petal Width"] >= 1.4) & 
                      (iris["Petal Width"] <= 1.8)]
 
+    # Update Iris_sub
+    iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
+
     # Plot areas
-    scatterplot(data=iris, 
+    scatterplot(data=iris_sub, 
                 x="Petal Area", 
                 y="Sepal Area", 
                 overlay={"x": iris_rule["Petal Area"],
