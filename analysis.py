@@ -129,7 +129,7 @@ def main():
                 overlay={"x": iris_rule["Petal Length"],
                               "y": iris_rule["Petal Width"],
                               "label": "Difficult to classify"},
-                title="Petal Length x Petal Width with Difficult-to-Classify Observations Highlighted",
+                title="Petal Length x Petal Width with Difficult-to-Classify\nObservations Highlighted",
                 filename="output/scatter_petal.png")
     insert_text("README.md", 
                 {"Classification Petal": "![Classification Petal](" + "output/scatter_petal.png" + ")"})
@@ -141,7 +141,7 @@ def main():
                 overlay={"x": iris_rule["Sepal Length"],
                               "y": iris_rule["Sepal Width"],
                               "label": "Difficult to classify"},
-                title="Sepal Length x Sepal Width with Difficult-to-Classify Observations Highlighted",
+                title="Sepal Length x Sepal Width with Difficult-to-Classify\nObservations Highlighted",
                 filename="output/scatter_sepal.png")
     insert_text("README.md", 
                 {"Classification Sepal": "![Classification Sepal](" + "output/scatter_sepal.png" + ")"})
