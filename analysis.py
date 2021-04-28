@@ -109,7 +109,12 @@ def main():
     insert_text("README.md", 
                 {"Boxplots": "![Boxplots](" + "output/boxplots.png" + ")"})
 
-
+    # Generate stripplot and insert into README
+    stripplot(data=iris_long, 
+             filename="output/stripplot.png", 
+             title="Stripplot demonstrating distribution and degree of separation of each class by feature")
+    insert_text("README.md", 
+                {"Stripplot": "![Stripplot](" + "output/stripplot.png" + ")"})
 
 if __name__ == "__main__":
     main()

@@ -79,11 +79,29 @@ def catplots(data=None, filename=None, title=None):
         h.savefig(filename)
 
 
+# Stripplot
+def stripplot(data=None, title=None):
+    sns.set_style("white")
+    h = sns.stripplot(data=data, 
+                      y="value", 
+                      x="variable", 
+                      hue="class", 
+                      jitter=0.2, 
+                      dodge=False)
+    
+    # Set title if specified
+    if title:                  
+        h.set(title=title)
+
+    # Save to specified path
+    if filename:
+        h.savefig(filename)
+
+
 def ecdfs():
     pass
 
-def stripplots():
-    pass
+
 
 def pairplots():
     pass

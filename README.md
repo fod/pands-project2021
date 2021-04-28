@@ -234,6 +234,11 @@ It is clear from the upper histograms that there is little correlation between s
 
 ### Visualisation of Relationships
 
+<!-- {% pairplot %} -->
+
+
+
+<!-- {% END %} -->
 
 ### Correlation
 1. Covariance
@@ -306,3 +311,5 @@ https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by
 https://www.machinecurve.com/index.php/2020/05/05/how-to-create-a-confusion-matrix-with-scikit-learn/ --- confusion matrix
 
 https://stackoverflow.com/a/29814281 --- facetgrid title
+
+https://towardsdatascience.com/what-why-and-how-to-read-empirical-cdf-123e2b922480
