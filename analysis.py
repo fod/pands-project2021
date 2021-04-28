@@ -134,7 +134,7 @@ def main():
     insert_text("README.md", 
                 {"Classification Petal": "![Classification Petal](" + "output/scatter_petal.png" + ")"})
 
-    # Generate Petal scatterplot
+    # Generate Sepal scatterplot
     scatterplot(data=iris, 
                 x="Sepal Length", 
                 y="Sepal Width", 

@@ -49,8 +49,8 @@ def histograms(data=None, filename=None, title=None):
                 common_bins=True, 
                 col_wrap=2,
                 facet_kws=dict(sharex=False, 
-                            sharey=True,
-                            margin_titles=True)
+                               sharey=True,
+                               margin_titles=True)
             )
 
     # Generate grid title and labels
@@ -79,8 +79,9 @@ def catplots(data=None, filename=None, title=None):
         h.savefig(filename)
 
 
-# Stripplot
 def stripplot(data=None, title=None, filename=None):
+# Stripplot
+
     plt.clf()
     sns.set_style("white")
     h = sns.stripplot(data=data, 
@@ -99,27 +100,12 @@ def stripplot(data=None, title=None, filename=None):
         plt.savefig(filename)
 
 
-def scatterplot(data=None, x=None, y=None, overlay_data=None, title=None, filename=None):
-    plt.clf()
-    sns.set()
-    sns.set_style("white")
-    #sns.set(rc={'figure.figsize':(8,8)})
-    plt.rcParams['figure.figsize'] = (8,8)
-    h = sns.scatterplot(data=data, 
-                        x=x, 
-                        y=y, 
-                        hue="class")
+def scatterplot(data=None, x=None, y=None, overlay_data=None, 
+                title=None, filename=None):
 
-    if overlay_data:
-        plt.scatter(x=overlay_data["x"], 
-                    y=overlay_data["y"], 
-                    facecolors='none', 
-                    edgecolors='red', 
-                    s=100, 
-                    label=overlay_data["label"], 
-                    alpha=0.5)
+    
 
-    plt.legend()
+    
 
     # Set title if specified
     if title:                  
@@ -127,6 +113,7 @@ def scatterplot(data=None, x=None, y=None, overlay_data=None, title=None, filena
 
     # Save to specified path
     if filename:
+        plt.tight_layout()
         plt.savefig(filename)
 
 
