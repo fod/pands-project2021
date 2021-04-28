@@ -42,17 +42,17 @@ def histograms(data=None, filename=None, title=None):
     # displot is a seaborn function for generating multiple faceted distribution plots
     # See: https://seaborn.pydata.org/generated/seaborn.displot.html
     h = sns.displot(data=data, 
-                x="value", 
-                multiple="stack",
-                hue="class",
-                col="variable", 
-                kind="hist", 
-                kde=False, 
-                common_bins=True, 
-                col_wrap=2,
-                facet_kws=dict(sharex=False, 
-                               sharey=True,
-                               margin_titles=True)
+                    x="value", 
+                    multiple="stack",
+                    hue="class",
+                    col="variable", 
+                    kind="hist", 
+                    kde=False, 
+                    common_bins=True, 
+                    col_wrap=2,
+                    facet_kws=dict(sharex=False, 
+                                sharey=True,
+                                margin_titles=True)
             )
 
     # Generate grid title and labels
@@ -65,14 +65,16 @@ def histograms(data=None, filename=None, title=None):
 
 
 def boxplots(data=None, filename=None, title=None):
-#  
+# Generate faceted boxplots based on the passed long-form dataframe
 
+    # catplot is a seaborn function for generating multiple faceted categorical plots
+    # See: https://seaborn.pydata.org/generated/seaborn.catplot.html
     h = sns.catplot(data=data, 
-                x="value", 
-                y="class", 
-                col="variable", 
-                kind="box", 
-                sharex=False)
+                    x="value", 
+                    y="class", 
+                    col="variable", 
+                    kind="box", 
+                    sharex=False)
 
     # Generate grid title and labels
     label_grid(h, axis_labels="value (cm)", 
@@ -84,11 +86,16 @@ def boxplots(data=None, filename=None, title=None):
 
 
 def stripplot(data=None, title=None, filename=None):
-# Stripplot
+# Generate a stripplot from the passed long-form dataframe
 
+    # Clear the current  matplotlib figure
     plt.clf()
+
+    # Select a clean Seaborn theme with gridlines
     sns.set_style("whitegrid")
-    h = sns.stripplot(data=data, 
+
+    # Generate the stripplot
+    g = sns.stripplot(data=data, 
                       y="value", 
                       x="variable", 
                       hue="class", 
@@ -97,7 +104,7 @@ def stripplot(data=None, title=None, filename=None):
     
     # Set title if specified
     if title:                  
-        h.set(title=title)
+        g.set(title=title)
 
     # Save to specified path
     if filename:
