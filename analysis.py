@@ -125,6 +125,16 @@ def main():
     # Remove easily classified I. setosa from dataframe
     iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
 
+
+    # Generate pairplots
+    pairplots(data=iris, 
+              title="Scatter plots of all feature combinations in iris dataset",
+              filename="output/pairplot.png")
+
+    insert_text("README.md", 
+                {"Pairplot": "![Pairplot](" + "output/pairplot.png" + ")"})
+
+
     # Generate Petal scatterplot
     scatterplot(data=iris_sub, 
                 x="Petal Length", 
@@ -179,7 +189,6 @@ def main():
 
 
     # Generate ECDF Plots
-
     ecdfs(data=iris_long,
           x="value",
           col="variable",
@@ -188,6 +197,10 @@ def main():
 
     insert_text("README.md", 
                 {"ECDF": "![ECDF](" + "output/ecdf.png" + ")"})
+
+
+
+
 
 
 if __name__ == "__main__":

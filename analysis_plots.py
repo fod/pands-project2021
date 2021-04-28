@@ -103,6 +103,7 @@ def stripplot(data=None, title=None, filename=None):
 def scatterplot(data=None, x=None, y=None, overlay=None, 
                 title=None, filename=None):
 
+    plt.clf()
     g = sns.jointplot(data=data, 
                       x=x, 
                       y=y, 
@@ -134,8 +135,8 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
 
 def ecdfs(data=None, x=None, col=None, title=None, filename=None):
 
+    plt.clf()
     sns.set_style("whitegrid")
-
     g = sns.displot(data=data, 
                     x=x, 
                     col=col, 
@@ -144,7 +145,7 @@ def ecdfs(data=None, x=None, col=None, title=None, filename=None):
                     linewidth=2, 
                     facet_kws=dict(sharex=False),
                     col_wrap=2)
-
+    
     def vertical_line(x, **kwargs):
         for n in (x[:50], x[50:100], x[100:]):
             plt.axvline(np.max(n), linestyle = '--', color = 'red', linewidth=1, label="Max")
@@ -152,14 +153,22 @@ def ecdfs(data=None, x=None, col=None, title=None, filename=None):
 
     g.map(vertical_line, "value")
     g.set_ylabels("proportion")
-    label_grid(g, "value (cm)", title)
+    label_grid(g, "value (cm)", title)  
 
     # Save to specified path
     if filename:
-        plt.tight_layout()
         plt.savefig(filename)
 
 
-def pairplots():
-    pass
+def pairplots(data=None, title=None, filename=None):
+    
+    g = sns.pairplot(data, hue="class", kind="scatter")
 
+    # Set title if specified
+    if title:                  
+        g.fig.suptitle(title)
+
+    # Save to specified path
+    if filename:
+        # plt.tight_layout()
+        plt.savefig(filename)

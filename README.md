@@ -251,7 +251,7 @@ It is clear from the upper histograms that there is little correlation between s
 
 <!-- {% Pairplot %} -->
 
-
+![Pairplot](output/pairplot.png)
 
 <!-- {% END %} -->
 
