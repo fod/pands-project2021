@@ -41,7 +41,7 @@ def histograms(data=None, filename=None, title=None):
 
     # displot is a seaborn function for generating multiple faceted distribution plots
     # See: https://seaborn.pydata.org/generated/seaborn.displot.html
-    h = sns.displot(data=data, 
+    g = sns.displot(data=data, 
                     x="value", 
                     multiple="stack",
                     hue="class",
@@ -56,12 +56,12 @@ def histograms(data=None, filename=None, title=None):
             )
 
     # Generate grid title and labels
-    label_grid(h, axis_labels="value (cm)", 
-                  title=title)
+    label_grid(g, axis_labels="value (cm)", 
+                  title=title, grid_titles=True)
 
     # Save to specified path
     if filename:
-        h.savefig(filename)
+        g.savefig(filename)
 
 
 def boxplots(data=None, filename=None, title=None):
@@ -69,7 +69,7 @@ def boxplots(data=None, filename=None, title=None):
 
     # catplot is a seaborn function for generating multiple faceted categorical plots
     # See: https://seaborn.pydata.org/generated/seaborn.catplot.html
-    h = sns.catplot(data=data, 
+    g = sns.catplot(data=data, 
                     x="value", 
                     y="class", 
                     col="variable", 
@@ -77,12 +77,12 @@ def boxplots(data=None, filename=None, title=None):
                     sharex=False)
 
     # Generate grid title and labels
-    label_grid(h, axis_labels="value (cm)", 
-                  title=title)
+    label_grid(g, axis_labels="value (cm)", 
+                  title=title, grid_titles=True)
 
     # Save to specified path
     if filename:
-        h.savefig(filename)
+        g.savefig(filename)
 
 
 def stripplot(data=None, title=None, filename=None):
@@ -95,6 +95,7 @@ def stripplot(data=None, title=None, filename=None):
     sns.set_style("whitegrid")
 
     # Generate the stripplot
+    # See http://seaborn.pydata.org/generated/seaborn.stripplot.html
     g = sns.stripplot(data=data, 
                       y="value", 
                       x="variable", 
@@ -113,8 +114,14 @@ def stripplot(data=None, title=None, filename=None):
 
 def scatterplot(data=None, x=None, y=None, overlay=None, 
                 title=None, filename=None):
+# Generate a jointplot (relational plot with edge distribution plots)
+# with an optional second dataframe overlaid
 
+    # Clear the current  matplotlib figure
     plt.clf()
+
+    # Generate the jointplot
+    # See http://seaborn.pydata.org/generated/seaborn.jointplot.html
     g = sns.jointplot(data=data, 
                       x=x, 
                       y=y, 
@@ -122,6 +129,8 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
                       kind="scatter",
                       s=15) 
 
+    # Overlay the second dataset
+    # Specifically in this case draw red circles around passed points
     if overlay:
         g.ax_joint.scatter(overlay["x"], 
                            overlay["y"], 
@@ -131,6 +140,7 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
                            label=overlay["label"], 
                            alpha=0.5)
 
+        # Add the overlaid data to the legend
         g.ax_joint.legend()
 
     # Set title if specified
