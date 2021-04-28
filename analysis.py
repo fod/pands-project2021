@@ -116,6 +116,25 @@ def main():
     insert_text("README.md", 
                 {"Stripplot": "![Stripplot](" + "output/stripplot.png" + ")"})
 
+    # Generate view on difficult to classify subset of Iris dataset
+    iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
+                     (iris["Petal Length"] <= 5.1) & 
+                     (iris["Petal Width"] >= 1.4) & 
+                     (iris["Petal Width"] <= 1.8)]
+
+    # Generate scatterplot
+    scatterplot(data=iris, 
+                x="Petal Length", 
+                y="Petal Width", 
+                overlay_data={"x": iris_rule["Petal Length"],
+                              "y": iris_rule["Petal Width"],
+                              "label": "Difficult to classify"},
+                title="Petal Length x Petal Width with Difficult-to-Classify Observations Highlighted",
+                filename="output/scatter_petal.png")
+    insert_text("README.md", 
+                {"Classification Petal": "![Classification Petal](" + "output/scatter_petal.png" + ")"})
+
+
 if __name__ == "__main__":
     main()
 

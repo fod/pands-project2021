@@ -234,11 +234,7 @@ It is clear from the upper histograms that there is little correlation between s
 
 ### Visualisation of Relationships
 
-<!-- {% pairplot %} -->
 
-
-
-<!-- {% END %} -->
 
 ### Correlation
 1. Covariance
@@ -255,7 +251,7 @@ It is clear from the upper histograms that there is little correlation between s
 
 <!-- {% Classification Petal %} -->
 
-
+![Classification Petal](output/scatter_petal.png)
 
 <!-- {% END %} -->
 

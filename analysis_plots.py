@@ -99,6 +99,35 @@ def stripplot(data=None, title=None, filename=None):
         plt.savefig(filename)
 
 
+def scatterplot(data=None, x=None, y=None, overlay_data=None, title=None, filename=None):
+    plt.clf()
+    sns.set_style("white")
+    h = sns.scatterplot(data=data, 
+                        x=x, 
+                        y=y, 
+                        hue="class")
+
+    if overlay_data:
+        plt.scatter(x=overlay_data["x"], 
+                    y=overlay_data["y"], 
+                    facecolors='none', 
+                    edgecolors='red', 
+                    s=100, 
+                    label=overlay_data["label"], 
+                    alpha=0.5)
+
+    plt.legend()
+
+    # Set title if specified
+    if title:                  
+        h.set(title=title)
+
+    # Save to specified path
+    if filename:
+        plt.savefig(filename)
+
+
+
 def ecdfs():
     pass
 
@@ -107,5 +136,3 @@ def ecdfs():
 def pairplots():
     pass
 
-def jointplots():
-    pass
