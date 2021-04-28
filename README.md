@@ -24,7 +24,7 @@ The code in this project is spread over three files:
 1. [```analysis.py```](analysis.py). This file contains the main project code. It consists of three functions:  
    
    i. ```summarise()```, which produces descriptive statistics for the dataset as a whole and for the dataset broken down by class (iris variety),
-   
+
    ii. ```output_table()```, which produces a dict of Github markdown formatted tables containing the descriptive statistics produced by ```summarise()``` above, and
    
    iii. ```main()```, which consists of a series of commands -- primarily calling on functions defined in [```analysis_util.py```](analysis_util.py) and [```analysis_plots.py```](analysis_plots.py) -- to manipulate the data, generate plots, and write the result to this README file.
@@ -33,8 +33,7 @@ The code in this project is spread over three files:
 
 3. [```analysis_plots.py```](analysis_plots.py). This file contains all of the code for generating the plots used in this project. Most of the functions are thin wrappers around plotting functions from the [```Seaborn```](https://seaborn.pydata.org/) plotting library with many of the parameters pre-selected. This functionality is given its own file in order to reduce the length and complexity of the main analysis file. The file contains seven functions, one of which, ```label_grid()```, is a helper function to prevent code reuse in the application of labels to certain types of faceted plots, and the rest -- ```histograms()```, ```boxplots()```, ```stripplot()```, ```scatterplot```, ```ecdfs()```, and ```pairplots()``` -- are used to generate the various plots examined in this project.
 
-
-
+The [```output```](output/) directory contains descriptive statistics in csv format, and all of the plots used in this report in png format. The [```iris_data```](iris_data/) contains all of the files pertaining to Fisher's iris data which were downloaded for the project. If the [```analysis.py```](analysis.py) file is run, and the correct libraries are available, the [```output```](output/) directory is populated with csv files and images, and this current (README) file is populated with tables and links to the images that are output during the program run.
 
 
 ## Data preparation
