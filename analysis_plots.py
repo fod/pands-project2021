@@ -166,9 +166,9 @@ def pairplots(data=None, title=None, filename=None):
 
     # Set title if specified
     if title:                  
+        g.fig.subplots_adjust(top=0.95)
         g.fig.suptitle(title)
 
     # Save to specified path
     if filename:
-        # plt.tight_layout()
         plt.savefig(filename)
