@@ -100,10 +100,25 @@ def stripplot(data=None, title=None, filename=None):
         plt.savefig(filename)
 
 
-def scatterplot(data=None, x=None, y=None, overlay_data=None, 
+def scatterplot(data=None, x=None, y=None, overlay=None, 
                 title=None, filename=None):
 
-    
+    g = sns.jointplot(data=data, 
+                      x=x, 
+                      y=y, 
+                      hue="class", 
+                      kind="scatter") 
+
+    if overlay:
+        a.ax_joint.scatter(overlay.x, 
+                           overlay.y, 
+                           facecolors='none', 
+                           edgecolors='red', 
+                           s=100, 
+                           label=overlay.label, 
+                           alpha=0.5)
+
+        a.ax_joint.legend()
 
     
 
