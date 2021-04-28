@@ -164,7 +164,7 @@ def ecdfs(data=None, x=None, col=None, title=None, filename=None):
 
     g.map(vertical_line, "value")
     g.set_ylabels("proportion")
-    label_grid(g, "value (cm)", title)  
+    label_grid(g, "value (cm)", title, grid_titles=True)  
 
     # Save to specified path
     if filename:
