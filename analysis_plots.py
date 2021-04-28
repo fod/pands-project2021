@@ -115,7 +115,7 @@ def stripplot(data=None, title=None, filename=None):
 def scatterplot(data=None, x=None, y=None, overlay=None, 
                 title=None, filename=None):
 # Generate a jointplot (relational plot with edge distribution plots)
-# with an optional second dataframe overlaid
+# from passed wide-form dataframe with an optional second dataframe overlaid
 
     # Clear the current  matplotlib figure
     plt.clf()
@@ -153,11 +153,17 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
         plt.savefig(filename)
 
 
-
 def ecdfs(data=None, x=None, col=None, title=None, filename=None):
+# Generate faceted ecdf plots from passed long-form dataframe
 
+    # Clear the current  matplotlib figure
     plt.clf()
+
+    # Select a clean Seaborn theme with gridlines
     sns.set_style("whitegrid")
+
+    # displot is a seaborn function for generating multiple faceted distribution plots
+    # See: https://seaborn.pydata.org/generated/seaborn.displot.html
     g = sns.displot(data=data, 
                     x=x, 
                     col=col, 
@@ -168,12 +174,19 @@ def ecdfs(data=None, x=None, col=None, title=None, filename=None):
                     col_wrap=2)
     
     def vertical_line(x, **kwargs):
+    # Nested function for drawing vertical lines at max values of passed series
+
         for n in (x[:50], x[50:100], x[100:]):
             plt.axvline(np.max(n), linestyle = '--', color = 'red', linewidth=1, label="Max")
             # plt.axvline(np.min(n), linestyle = '--', color = 'pink', linewidth=2, label="Min")
 
+    # Draw the max lines in ECDF facets
     g.map(vertical_line, "value")
+
+    # Label y-axes
     g.set_ylabels("proportion")
+
+    # Generate grid title and labels
     label_grid(g, "value (cm)", title, grid_titles=True)  
 
     # Save to specified path
@@ -182,11 +195,17 @@ def ecdfs(data=None, x=None, col=None, title=None, filename=None):
 
 
 def pairplots(data=None, title=None, filename=None):
+# Generate faceted scatterplots for all 
+# feature pairs of passed long-form dataset
     
+    # pairplot is a Seaborn function for generating grids of relational plots
     g = sns.pairplot(data, hue="class", kind="scatter")
 
+    # Generate grid title
     label_grid(g, title=title)
 
     # Save to specified path
     if filename:
         plt.savefig(filename)
+
+

@@ -5,12 +5,9 @@
 # Imports
 import pandas as pd
 import numpy as np
-import fileinput
 from analysis_util import insert_text, csv_to_df, df_to_csv
-from analysis_plots import *
-
-#import matplotlib.pyplot as pyplot
-#import seaborn as sns
+from analysis_plots import histograms, boxplots, stripplot, 
+                           scatterplot, ecdfs, pairplots
 
 
 def summarise(iris):
@@ -197,9 +194,6 @@ def main():
 
     insert_text("README.md", 
                 {"ECDF": "![ECDF](" + "output/ecdf.png" + ")"})
-
-
-
 
 
 
