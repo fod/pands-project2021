@@ -127,10 +127,11 @@ def main():
                 x="Petal Length", 
                 y="Petal Width", 
                 overlay={"x": iris_rule["Petal Length"],
-                              "y": iris_rule["Petal Width"],
-                              "label": "Difficult to classify"},
+                         "y": iris_rule["Petal Width"],
+                         "label": "Difficult to classify"},
                 title="Petal Length x Petal Width with Difficult-to-Classify\nObservations Highlighted",
                 filename="output/scatter_petal.png")
+
     insert_text("README.md", 
                 {"Classification Petal": "![Classification Petal](" + "output/scatter_petal.png" + ")"})
 
@@ -139,13 +140,36 @@ def main():
                 x="Sepal Length", 
                 y="Sepal Width", 
                 overlay={"x": iris_rule["Sepal Length"],
-                              "y": iris_rule["Sepal Width"],
-                              "label": "Difficult to classify"},
+                         "y": iris_rule["Sepal Width"],
+                         "label": "Difficult to classify"},
                 title="Sepal Length x Sepal Width with Difficult-to-Classify\nObservations Highlighted",
                 filename="output/scatter_sepal.png")
+
     insert_text("README.md", 
                 {"Classification Sepal": "![Classification Sepal](" + "output/scatter_sepal.png" + ")"})
 
+    # Add area columns to iris dataframe
+    iris["Sepal Area"] = iris["Sepal Length"] * iris["Sepal Width"]
+    iris["Petal Area"] = iris["Petal Length"] * iris["Petal Width"]
+
+    # Update difficult-to-classify subset
+    iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
+                     (iris["Petal Length"] <= 5.1) & 
+                     (iris["Petal Width"] >= 1.4) & 
+                     (iris["Petal Width"] <= 1.8)]
+
+    # Plot areas
+    scatterplot(data=iris, 
+                x="Petal Area", 
+                y="Sepal Area", 
+                overlay={"x": iris_rule["Petal Area"],
+                         "y": iris_rule["Sepal Area"],
+                         "label": "Difficult to classify"},
+                title="Petal Area x Sepal Area with Difficult-to-Classify\nObservations Highlighted",
+                filename="output/scatter_area.png")
+
+    insert_text("README.md", 
+                {"Classification Area": "![Classification Area](" + "output/scatter_area.png" + ")"})
 
 if __name__ == "__main__":
     main()

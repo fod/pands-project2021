@@ -269,7 +269,7 @@ It is clear from the upper histograms that there is little correlation between s
 
 <!-- {% Classification Area %} -->
 
-
+![Classification Area](output/scatter_area.png)
 
 <!-- {% END %} -->
 
