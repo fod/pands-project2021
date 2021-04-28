@@ -276,7 +276,7 @@ It is clear from the upper histograms that there is little correlation between s
 
 <!-- {% Classification Area %} -->
 
-<img src="output/scatter_area.png" height=500>
+<center><img src="output/scatter_area.png" height=500></center>
 
 <!-- {% END %} -->
 
