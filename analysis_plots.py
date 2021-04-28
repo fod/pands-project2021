@@ -110,21 +110,19 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
                       kind="scatter") 
 
     if overlay:
-        a.ax_joint.scatter(overlay.x, 
-                           overlay.y, 
+        g.ax_joint.scatter(overlay["x"], 
+                           overlay["y"], 
                            facecolors='none', 
                            edgecolors='red', 
                            s=100, 
-                           label=overlay.label, 
+                           label=overlay["label"], 
                            alpha=0.5)
 
-        a.ax_joint.legend()
-
-    
+        g.ax_joint.legend()
 
     # Set title if specified
     if title:                  
-        h.set(title=title)
+        g.fig.suptitle(title)
 
     # Save to specified path
     if filename:
