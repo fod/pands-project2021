@@ -237,7 +237,7 @@ It is clear from the upper histograms that there is little correlation between s
 
 #### Boxplots
 
-The boxplots below succinctly encode a wealth of information into a simple chart. The box itself represents the interquartile range, i.e. the distance between the first and the third quartiles — thus representing 50% of the range of values in the dataset if it is normally distributed. The vertical line inside the box represents the median. The 'whiskers' extend to 1.5x the inter-quartile range and any values outside of that range can be considered outliers and are represented by points.
+The boxplots below (generated using [```seaborn.catplot(... kind="box" ...)```](https://seaborn.pydata.org/generated/seaborn.catplot.html)) succinctly encode a wealth of information into a simple chart. The box itself represents the interquartile range, i.e. the distance between the first and the third quartiles — thus representing 50% of the range of values in the dataset if it is normally distributed. The vertical line inside the box represents the median. The 'whiskers' extend to 1.5x the inter-quartile range and any values outside of that range can be considered outliers and are represented by points.
 
 <!-- {% Boxplots %} -->
 
@@ -247,7 +247,9 @@ The boxplots below succinctly encode a wealth of information into a simple chart
 
 In addition to encoding the structure of the data the boxplots can offer some insight into the problem of classification. It can be seen that neither sepal length nor width alone can be used to distinguish the class of an observation, but *I. setosa* can be identified using either petal length or width. Although none of the observed features is suitable for uniquely identifying *I. versicolor* or *I. virginica*, the bulk of the observations of those two varieties would be identifiable solely using one or other of the petal dimensions.
 
+#### Stripplots
 
+A similar story is told by the stripplot ([```seaborn.stripplot()```](https://seaborn.pydata.org/generated/seaborn.stripplot.html)) below. The less mixing occurring between classes, and the greater range — represented by the vertical spread of the markers — indicates greater separability of those classes.  
 
 <!-- {% Stripplot %} -->
 
@@ -255,6 +257,7 @@ In addition to encoding the structure of the data the boxplots can offer some in
 
 <!-- {% END %} -->
 
+As such, the stripplot here appears to indicate that, while either petal width or length are sufficient to identify *I. setosa*, petal length is the clearer indicator. Petal length also appears to come closest to separating *I. versicolor* and *I. virginica*.
 
 <!-- {% ECDF %} -->
 
