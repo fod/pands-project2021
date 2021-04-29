@@ -11,11 +11,11 @@ This project uses the Python programming language to perform an exploratory data
 
 This project was made using the following Python version and package versions:
 
-- Python 3.9.3
-- pandas 1.2.4
-- numpy 1.19.2
-- matplotlib 3.3.4
-- seaborn 0.11.1
+- [Python 3.9.3](https://www.python.org/downloads/release/python-393/)
+- [pandas 1.2.4](https://pandas.pydata.org/docs/)
+- [numpy 1.19.2](https://numpy.org/)
+- [matplotlib 3.3.4](https://matplotlib.org/)
+- [seaborn 0.11.1](https://seaborn.pydata.org/)
 
 ## How to run this project
 
