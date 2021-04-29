@@ -138,6 +138,7 @@ Some useful information can be gleaned from this table even before the data is b
 
 Based on the observations made above, and assuming that the high variability in petal size is at least partially contingent on iris species, it seems likely that petal dimension will be more useful in classifying iris samples than sepal dimension. One way of testing that hypothesis, and of generally learning more about the data, is to produce the same descriptive statistics broken down by class (i.e. iris variety). This is achieved using pandas ```DataFrame.groupby()``` method [REF]. The resulting tables appear below. Each table represents one of the four observed features (lengths and widths of petals and sepals), and each column of each table represents one of the three classes (*I. setosa*, *I. versicolor*, and *I. virginica*). The rows contain the same descriptive statistics as in the table above, for each combination of feature and class.
 
+
 <table>
 <tr>
 <th> Petal Length </th>
@@ -296,9 +297,15 @@ The ECDF plot plots a function which returns, for any particular value, what pro
 
 Examination of the first plot — *Sepal Length* — reveals that all sepal length measurements of *I. versicolor* which are below the maximum sepal length measured on *I. setosa* correspond to a proportion of ~0.4. This means that ~40% of *I. versicolor* samples observed are indistinguishable from *I. setosa* based on sepal length alone. Similarly, almost 80% of *I. virginica* samples overlap with *I. versicolor* in terms of sepal length. Clearly Sepal length is a poor indicator of iris species.
 
-As noted previously, petal dimensions appear to provide the clearest metric for identification of iris species but, contrary to the assumption made above on observation of the stripplot, it is petal width rather than petal length that will probably provide the fewest misclassifications. To confirm this the bottom two ecdf plots should be examined. Note that the petal length overlap between *I. versicolor* and 
-*I. virginica* accounts for almost 20% of the sample space, whereas for petal width 
+As noted previously, petal dimensions appear to provide the clearest metric for identification of iris species but, contrary to the assumption made above on observation of the stripplot, it is petal width rather than petal length that will probably provide the fewest misclassifications. This is confirmed by examining the bottom two ecdf plots. Note that the petal length overlap between *I. versicolor* and 
+*I. virginica* accounts for almost 20% of the sample space, whereas, for petal width, the overlap covers less than 10%. 
 
+Recall that the 
+```iris[iris["Petal Width"] == 1.8]```
+<!-- {% Petal Width = 1.8 %} -->
+
+
+<!-- {% END %} -->
 
 ## Relationships
 
