@@ -14,9 +14,8 @@ HDip Data Analytics Programming and Scripting Project
         - [Boxplots](#boxplots)
         - [Stripplots](#stripplots)
         - [ECDF Empirical Cumulative Distribution Function](#ecdf-empirical-cumulative-distribution-function)
-- [Relationships](#relationships)
-    - [Correlation](#correlation)
-    - [Visualisation of Relationships](#visualisation-of-relationships)
+- [Correlation](#correlation)
+    - [Visualisation of Correlation](#visualisation-of-correlation)
     - [Separation improvement](#separation-improvement)
 - [Further Study](#further-study)
     - [Uncertainty measurement](#uncertainty-measurement)
@@ -56,7 +55,7 @@ The code in this project is spread over three files:
 
 3. [```analysis_plots.py```](analysis_plots.py). This file contains all of the code for generating the plots used in this project. Most of the functions are thin wrappers around plotting functions from the [```Seaborn```](https://seaborn.pydata.org/) plotting library with many of the parameters preselected. This functionality is given its own file in order to reduce the length and complexity of the main analysis file. The file contains seven functions, one of which, ```label_grid()```, is a helper function to help avoid code duplication in the application of labels to certain types of faceted plots, and the rest — ```histograms()```, ```boxplots()```, ```stripplot()```, ```scatterplot```, ```ecdfs()```, and ```pairplots()``` — are used to generate the various plots examined in this project.
 
-The [```output```](output/) directory contains descriptive statistics in csv format, and all of the plots used in this report, in png format. The [```iris_data```](iris_data/) directory contains all of the files pertaining to Fisher's iris data which were downloaded for the project. If the [```analysis.py```](analysis.py) file is run, and the correct libraries are available, the [```output```](output/) directory is populated with CSV files and images, and this current (README) file is populated with tables and links to the images that are output during the program run.
+The [```output```](output/) directory contains descriptive statistics in CSV format, and all of the plots used in this report, in png format. The [```iris_data```](iris_data/) directory contains all of the files pertaining to Fisher's iris data which were downloaded for the project. If the [```analysis.py```](analysis.py) file is run, and the correct libraries are available, the [```output```](output/) directory is populated with CSV files and images, and this current (README) file is populated with tables and links to the images that are output during the program run.
 
 
 ## Data preparation
@@ -328,10 +327,9 @@ only one of those would be a misclassification. Furthermore, less than 10% of *I
 Using a rule-based classification method like this, based tightly on observed data, carries a high risk of overfitting (REF), where the classifier is too closely coupled to training data and unable to generalise successfully to new data. 
 
 
-## Relationships
+## Correlation
 
-
-### Correlation
+A correlation matrix can be produced using ```DataFrame.corr()``` (REF). This method produces, by default, a Pearson correlation coefficient matrix (REF), which shows a normalised (to -1, 1) measure of covariance between each pair of features in the dataframe. The table below is the output of ```iris.corr()```:
 
 <!-- {% Correlation %} -->
 
@@ -344,12 +342,11 @@ Using a rule-based classification method like this, based tightly on observed da
 
 <!-- {% END %} -->
 
+As noted in the explanatory file which accompanies the downloaded iris dataset, [iris.names](iris_data/iris.names), there is a high degree of correlation between petal length and petal width.
 
 
-2. ρ (Pearson correlation)
+### Visualisation of Correlation
 
-
-### Visualisation of Relationships
 
 
 <!-- {% Pairplot %} -->
@@ -428,3 +425,7 @@ https://data.library.virginia.edu/understanding-empirical-cumulative-distributio
 https://seaborn.pydata.org/generated/seaborn.ecdfplot.html
 
 https://en.wikipedia.org/wiki/Overfitting
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html
+
+https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
