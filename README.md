@@ -322,6 +322,12 @@ Recall from the [descriptive statistics](#descriptive-statistics) section that t
 
 <!-- {% END %} -->
 
+There are eleven observations of 1.8 cm petal widths in *I. virginica* and just one in *I. versicolor*. This means that, if all observations with a petal width of 1.8 cm or higher was classified as *I. virginica*,
+only one of those would be a misclassification. Furthermore, less than 10% of *I. virginica* remains to be classified after all observations with over 1.8 cm petal width. Therefore, based on just petal width a 90% correct identification is guaranteed between *I. versicolor* and *I. virginica*, along with 100% correct identification of *I. setosa*. 
+
+Using a rule-based classification method like this, based tightly on observed data, carries a high risk of overfitting (REF), where the classifier is too closely coupled to training data and unable to generalise successfully to new data. 
+
+
 ## Relationships
 
 ### Correlation
@@ -406,3 +412,5 @@ https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51
 https://data.library.virginia.edu/understanding-empirical-cumulative-distribution-functions/
 
 https://seaborn.pydata.org/generated/seaborn.ecdfplot.html
+
+https://en.wikipedia.org/wiki/Overfitting
