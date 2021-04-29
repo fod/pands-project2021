@@ -330,10 +330,24 @@ Using a rule-based classification method like this, based tightly on observed da
 
 ## Relationships
 
+
 ### Correlation
-1. Covariance
+
+<!-- {% Correlation %} -->
+
+|              |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width |
+|--------------|----------------|---------------|----------------|---------------|
+| Sepal Length |       1        |     -0.11757  |       0.871754 |      0.817941 |
+| Sepal Width  |      -0.11757  |      1        |      -0.42844  |     -0.366126 |
+| Petal Length |       0.871754 |     -0.42844  |       1        |      0.962865 |
+| Petal Width  |       0.817941 |     -0.366126 |       0.962865 |      1        |
+
+<!-- {% END %} -->
+
+
+
 2. ρ (Pearson correlation)
-3. Variability due to codependence / independent variability
+
 
 ### Visualisation of Relationships
 

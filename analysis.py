@@ -143,17 +143,20 @@ def main():
     # Remove easily classified I. setosa from dataframe
     iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
 
+    # Calculate correlation matrix and insert into README
+    insert_text("README.md", 
+                {"Correlation": iris.corr().to_markdown(tablefmt="github")})
 
-    # Generate pairplots
+
+    # Generate pairplots and insert into README
     pairplots(data=iris, 
               title="Scatter plots of all feature combinations in iris dataset",
               filename="output/pairplot.png")
-
     insert_text("README.md", 
                 {"Pairplot": "![Pairplot](" + "output/pairplot.png" + ")"})
 
 
-    # Generate Petal scatterplot
+    # Generate Petal scatterplot and insert into README
     scatterplot(data=iris_sub, 
                 x="Petal Length", 
                 y="Petal Width", 
@@ -162,11 +165,10 @@ def main():
                          "label": "Difficult to classify"},
                 title="Petal Length x Petal Width with Difficult-to-Classify\nObservations Highlighted",
                 filename="output/scatter_petal.png")
-
     insert_text("README.md", 
                 {"Classification Petal": '<img src="' + 'output/scatter_petal.png"' + ' height=500>'})
 
-    # Generate Sepal scatterplot
+    # Generate Sepal scatterplot and insert into README
     scatterplot(data=iris_sub, 
                 x="Sepal Length", 
                 y="Sepal Width", 
@@ -175,7 +177,6 @@ def main():
                          "label": "Difficult to classify"},
                 title="Sepal Length x Sepal Width with Difficult-to-Classify\nObservations Highlighted",
                 filename="output/scatter_sepal.png")
-
     insert_text("README.md", 
                 {"Classification Sepal": '<img src="' + 'output/scatter_sepal.png"' + ' height=500>'})
 
@@ -192,7 +193,7 @@ def main():
     # Update Iris_sub
     iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
 
-    # Plot areas
+    # Plot areas and insert into README
     scatterplot(data=iris_sub, 
                 x="Petal Area", 
                 y="Sepal Area", 
@@ -201,7 +202,6 @@ def main():
                          "label": "Difficult to classify"},
                 title="Petal Area x Sepal Area with Difficult-to-Classify\nObservations Highlighted",
                 filename="output/scatter_area.png")
-
     insert_text("README.md", 
                 {"Classification Area": '<img src="' + 'output/scatter_area.png"' + ' height=500>'})
 
