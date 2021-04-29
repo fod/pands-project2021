@@ -2,6 +2,29 @@
 
 HDip Data Analytics Programming and Scripting Project
 
+<!-- TOC -->
+
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [How to run this project](#how-to-run-this-project)
+- [Data preparation](#data-preparation)
+- [Descriptive Statistics](#descriptive-statistics)
+    - [Visualisation of Descriptive Statistics](#visualisation-of-descriptive-statistics)
+        - [Histograms](#histograms)
+        - [Boxplots](#boxplots)
+        - [Stripplots](#stripplots)
+        - [ECDF Empirical Cumulative Distribution Function](#ecdf-empirical-cumulative-distribution-function)
+- [Relationships](#relationships)
+    - [Correlation](#correlation)
+    - [Visualisation of Relationships](#visualisation-of-relationships)
+    - [Separation improvement](#separation-improvement)
+- [Further Study](#further-study)
+    - [Uncertainty measurement](#uncertainty-measurement)
+    - [Machine learning](#machine-learning)
+- [References](#references)
+
+<!-- /TOC -->
+
 ## Introduction
 Fisher's Iris Data set is a collection of 50 observations of four measurements — sepal length, sepal width, petal length, and petal width from each of three plant species: *Iris setosa*, *I. versicolor*, and *I. virginica*. Two of these sets (*I. setosa* and *I. versicolor*) were collected from plants growing together in the same colony, while the third (*I. virginica*) was collected from a separate site (Fisher, 1936). *I. setosa* is linearly separable from the other two species based on some of the four measurements recorded whereas *I. vesicolor* and *I. virginica* are not (*ibid.*).
 
@@ -89,7 +112,7 @@ The pandas ```DataFrame.melt()``` method transforms a wide-form dataframe to a l
 
 <hr>
 
-### Descriptive Statistics
+## Descriptive Statistics
 
 Descriptive statistics for the dataset can be generated using the pandas ```DataFrame.describe()``` method. The count, mean, standard deviation, minimum value, maximum value, the median, and the first and third quartiles for each feature are calculated for the dataset as a whole. The result is shown in the table below. The data in this table has also been output to [```output/full.csv```](output/full.csv) in CSV format using the ```DataFrame.to_csv()``` method.
 
@@ -259,21 +282,26 @@ A similar story is told by the stripplot ([```seaborn.stripplot()```](https://se
 
 As such, the stripplot here appears to indicate that, while either petal width or length are sufficient to identify *I. setosa*, petal length is the clearer indicator. Petal length also appears to come closest to separating *I. versicolor* and *I. virginica*.
 
+#### ECDF (Empirical Cumulative Distribution Function)
+
+The final distribution plot that will be examined here is the ECDF (REF). The plot below was generated using [```seaborn.displot(... kind="ecdf" ...```](https://seaborn.pydata.org/generated/seaborn.displot.html)).
+
+The ECDF plot plots a function which returns, for any particular value, what proportion of the data lies below that value — it is like a cumulative distribution curve. This can give useful insights into the structure of the data that may be less obvious in some of the other distribution plots. The faceted plot below shows the ECDF for of the four observed features for each iris variety. 
+
 <!-- {% ECDF %} -->
 
 ![ECDF](output/ecdf.png)
 
 <!-- {% END %} -->
 
-
-### Visualisation of Relationships
-
-
+## Relationships
 
 ### Correlation
 1. Covariance
 2. ρ (Pearson correlation)
 3. Variability due to codependence / independent variability
+
+### Visualisation of Relationships
 
 
 <!-- {% Pairplot %} -->
@@ -346,3 +374,7 @@ https://stackoverflow.com/a/29814281 --- facetgrid title
 https://towardsdatascience.com/what-why-and-how-to-read-empirical-cdf-123e2b922480
 
 https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51
+
+https://data.library.virginia.edu/understanding-empirical-cumulative-distribution-functions/
+
+https://seaborn.pydata.org/generated/seaborn.ecdfplot.html
