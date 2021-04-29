@@ -234,6 +234,8 @@ The Seaborn library (REF), which is built on Matplotlib (REF) offers a powerful 
 It is clear from the upper histograms that there is little correlation between sepal dimension and class. The petal length and width histograms, on the other hand, clearly show that there is no overlap between the petal dimensions of *I. setosa* and those of the other two classes. Some overlap is evident between *I. versicolor* and *I. virginica* in terms of petal length and width but, especially in the case of petal width, the overlap is minimal, pointing to a high degree of correlation between the class and those two variables.
 
 
+The boxplots below succinctly encode a wealth of information into a simple chart. The box itself represents the interquartile range, i.e. the distance between the first and the third quartiles -- thus reprsenting 50% of the range of values in the dataset if it is normally distributed. The vertical line inside the box relresents the median. 
+
 <!-- {% Boxplots %} -->
 
 ![Boxplots](output/boxplots.png)
@@ -333,3 +335,5 @@ https://www.machinecurve.com/index.php/2020/05/05/how-to-create-a-confusion-matr
 https://stackoverflow.com/a/29814281 --- facetgrid title
 
 https://towardsdatascience.com/what-why-and-how-to-read-empirical-cdf-123e2b922480
+
+https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51
