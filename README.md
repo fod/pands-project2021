@@ -296,8 +296,8 @@ The ECDF plot plots a function which returns, for any particular value, what pro
 
 Examination of the first plot — *Sepal Length* — reveals that all sepal length measurements of *I. versicolor* which are below the maximum sepal length measured on *I. setosa* correspond to a proportion of ~0.4. This means that ~40% of *I. versicolor* samples observed are indistinguishable from *I. setosa* based on sepal length alone. Similarly, almost 80% of *I. virginica* samples overlap with *I. versicolor* in terms of sepal length. Clearly Sepal length is a poor indicator of iris species.
 
-As 
-
+As noted previously, petal dimensions appear to provide the clearest metric for identification of iris species but, contrary to the assumption made above on observation of the stripplot, it is petal width rather than petal length that will probably provide the fewest misclassifications. To confirm this the bottom two ecdf plots should be examined. Note that the petal length overlap between *I. versicolor* and 
+*I. virginica* accounts for almost 20% of the sample space, whereas for petal width 
 
 
 ## Relationships
