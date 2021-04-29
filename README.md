@@ -110,8 +110,8 @@ Descriptive statistics for the dataset can be generated using the pandas ```Data
 
 Some useful information can be gleaned from this table even before the data is broken down by class for a finer-grained examination. Some observations that can be made are:
 
-1. Sepals, with mean dimensions of 5.84 cm x 3.06 cm tend to be considerably larger than petals (3.76 × 1.2).
-2. Petal size, on the other hand is much more variable than sepal size, as indicated both by the petal length standard deviation (1.77), and the range of petal lengths(6.9 – 1 = 5.9 cm) versus the range of sepal lengths (7.9 – 4.3 = 3.6 cm; standard deviation 0.83).
+1. Sepals, with mean dimensions of 5.84 cm × 3.06 cm tend to be considerably larger than petals (3.76 × 1.2).
+2. Petal size, on the other hand is much more variable than sepal size, as indicated both by the petal length standard deviation (1.77), and the range of petal lengths(6.9 - 1 = 5.9 cm) versus the range of sepal lengths (7.9 - 4.3 = 3.6 cm; standard deviation 0.83).
 
 Based on the observations made above, and assuming that the high variability in petal size is at least partially contingent on iris species, it seems likely that petal dimension will be more useful in classifying iris samples than sepal dimension. One way of testing that hypothesis, and of generally learning more about the data, is to produce the same descriptive statistics broken down by class (i.e. iris variety). This is achieved using pandas ```DataFrame.groupby()``` method [REF]. The resulting tables appear below. Each table represents one of the four observed features (lengths and widths of petals and sepals), and each column of each table represents one of the three classes (*I. setosa*, *I. versicolor*, and *I. virginica*). The rows contain the same descriptive statistics as in the table above, for each combination of feature and class.
 
@@ -244,6 +244,8 @@ The boxplots below succinctly encode a wealth of information into a simple chart
 ![Boxplots](output/boxplots.png)
 
 <!-- {% END %} -->
+
+In addition to encoding the structure of the data the boxplots can offer some insight into the problem of classification. It can be seen that neither sepal length nor width alone can be used to distinguish the class of an observation, but *I. setosa* can be identified using either petal length or width. Although none of the observed features is suitable for uniquely identifying *I. versicolor* or *I. virginica*, the bulk of the observations of those two varieties would be identifiable solely using one or other of the petal dimensions.
 
 
 
