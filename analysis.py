@@ -117,6 +117,23 @@ def main():
     insert_text("README.md", 
                 {"Stripplot": "![Stripplot](" + "output/stripplot.png" + ")"})
 
+    # Generate ECDF Plots and insert into README
+    ecdfs(data=iris_long,
+          x="value",
+          col="variable",
+          title="Empirical Cumulative Distribution Function (ECDF)",
+          filename="output/ecdf.png")
+    insert_text("README.md", 
+                {"ECDF": "![ECDF](" + "output/ecdf.png" + ")"})
+
+    # Generate Petal Width == 1.8 table for ecdf discussion
+    # and insert into README
+    max_petal_width = np.max(iris[iris["class"]=="Iris-versicolor"]["Petal Width"])
+    max_petal_width_tbl = iris[iris["Petal Width"]==max_petal_width]
+    insert_text("README.md", 
+                {"Petal Width = 1.8": max_petal_width_tbl.to_markdown(tablefmt="github")})
+
+
     # Generate view on difficult to classify subset of Iris dataset
     iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
                      (iris["Petal Length"] <= 5.1) & 
@@ -189,15 +206,6 @@ def main():
                 {"Classification Area": '<img src="' + 'output/scatter_area.png"' + ' height=500>'})
 
 
-    # Generate ECDF Plots
-    ecdfs(data=iris_long,
-          x="value",
-          col="variable",
-          title="Empirical Cumulative Distribution Function (ECDF)",
-          filename="output/ecdf.png")
-
-    insert_text("README.md", 
-                {"ECDF": "![ECDF](" + "output/ecdf.png" + ")"})
 
 
 

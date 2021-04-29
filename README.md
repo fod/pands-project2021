@@ -300,11 +300,25 @@ Examination of the first plot — *Sepal Length* — reveals that all sepal leng
 As noted previously, petal dimensions appear to provide the clearest metric for identification of iris species but, contrary to the assumption made above on observation of the stripplot, it is petal width rather than petal length that will probably provide the fewest misclassifications. This is confirmed by examining the bottom two ecdf plots. Note that the petal length overlap between *I. versicolor* and 
 *I. virginica* accounts for almost 20% of the sample space, whereas, for petal width, the overlap covers less than 10%. 
 
-Recall from the [descriptive statistics](#descriptive-statistics) section that the maximum value for *I. versicolor* petal width is 1.8 cm. This can be confirmed by querying the dataframe: ```np.max(iris[iris["class"]=="Iris-versicolor"]["Petal Width"])```. Another query, this time 
+Recall from the [descriptive statistics](#descriptive-statistics) section that the maximum value for *I. versicolor* petal width is 1.8 cm. This can be confirmed by querying the dataframe: ```np.max(iris[iris["class"]=="Iris-versicolor"]["Petal Width"])```. Another query, this time for all observations with a petal width value of 1.8 (```iris[iris["Petal Width"] == 1.8]```) returns the following result:
 
-```iris[iris["Petal Width"] == 1.8]```
+
 <!-- {% Petal Width = 1.8 %} -->
 
+|     |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width | class           |
+|-----|----------------|---------------|----------------|---------------|-----------------|
+|  70 |            5.9 |           3.2 |            4.8 |           1.8 | Iris-versicolor |
+| 103 |            6.3 |           2.9 |            5.6 |           1.8 | Iris-virginica  |
+| 107 |            7.3 |           2.9 |            6.3 |           1.8 | Iris-virginica  |
+| 108 |            6.7 |           2.5 |            5.8 |           1.8 | Iris-virginica  |
+| 116 |            6.5 |           3   |            5.5 |           1.8 | Iris-virginica  |
+| 123 |            6.3 |           2.7 |            4.9 |           1.8 | Iris-virginica  |
+| 125 |            7.2 |           3.2 |            6   |           1.8 | Iris-virginica  |
+| 126 |            6.2 |           2.8 |            4.8 |           1.8 | Iris-virginica  |
+| 127 |            6.1 |           3   |            4.9 |           1.8 | Iris-virginica  |
+| 137 |            6.4 |           3.1 |            5.5 |           1.8 | Iris-virginica  |
+| 138 |            6   |           3   |            4.8 |           1.8 | Iris-virginica  |
+| 149 |            5.9 |           3   |            5.1 |           1.8 | Iris-virginica  |
 
 <!-- {% END %} -->
 
