@@ -286,13 +286,19 @@ As such, the stripplot here appears to indicate that, while either petal width o
 
 The final distribution plot that will be examined here is the ECDF (REF). The plot below was generated using [```seaborn.displot(... kind="ecdf" ...```](https://seaborn.pydata.org/generated/seaborn.displot.html)).
 
-The ECDF plot plots a function which returns, for any particular value, what proportion of the data lies below that value — it is like a cumulative distribution curve. This can give useful insights into the structure of the data that may be less obvious in some of the other distribution plots. The faceted plot below shows the ECDF for of the four observed features for each iris variety. 
+The ECDF plot plots a function which returns, for any particular value, what proportion of the data lies below that value — it is like a cumulative distribution curve. This can give useful insights into the structure of the data that may be less obvious in some of the other distribution plots. The faceted plot below shows the ECDF for each of the four observed features for each iris variety. Vertical dotted red lines are added at the maximum value for each feature so that the overlap, or region of possible misclassification, can be easily identified.
 
 <!-- {% ECDF %} -->
 
 ![ECDF](output/ecdf.png)
 
 <!-- {% END %} -->
+
+Examination of the first plot — *Sepal Length* — reveals that all sepal length measurements of *I. versicolor* which are below the maximum sepal length measured on *I. setosa* correspond to a proportion of ~0.4. This means that ~40% of *I. versicolor* samples observed are indistinguishable from *I. setosa* based on sepal length alone. Similarly, almost 80% of *I. virginica* samples overlap with *I. versicolor* in terms of sepal length. Clearly Sepal length is a poor indicator of iris species.
+
+As 
+
+
 
 ## Relationships
 
