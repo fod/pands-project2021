@@ -369,7 +369,7 @@ Because *I. setosa* is easily discriminated it can be removed from the dataframe
     # Remove easily classified I. setosa from dataframe
     iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
 
-It is also useful to identify the range of values for petal width and length within which classification using those two observed features is difficult. Using overlap values identified through examination of the [ECDF](#ecdf-empirical-cumulative-distribution-function) plots previously discussed, which are highlighted in the chart below, a new dataframe is created using only those observations:
+It is also useful to identify the range of values for petal width and length within which classification is difficult using those two observed features. Using overlap values identified through examination of the [ECDF](#ecdf-empirical-cumulative-distribution-function) plots previously discussed, which are highlighted in the chart below, a new dataframe is created using only those observations:
 
     # Generate difficult to classify subset of Iris dataset
     iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
@@ -384,6 +384,15 @@ It is also useful to identify the range of values for petal width and length wit
 
 <!-- {% END %} -->
 
+Having removed the easily identifiable *I. setosa*, the following 'jointplot' (REF) is produced. This is a scatterplot with distribution plots, such as kde plots or histograms, at the margins. The difficult-to-classify observations identified in the ecdf plot above are plotted on top of the regular scatterplot. Doing this will allow those observations to be tracked on plots of different feature combinations.
+
+The plots below are generated using
+
+    g = seaborn.jointplot(...)
+    
+and the overlaid dataset is plotted by referencing the original plot (REF):
+
+    g.ax_joint.scatter(...)
 
 
 <!-- {% Classification Petal %} -->
