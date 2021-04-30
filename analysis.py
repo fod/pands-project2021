@@ -121,6 +121,7 @@ def main():
     ecdfs(data=iris_long,
           x="value",
           col="variable",
+          vlines=True,
           title="Empirical Cumulative Distribution Function (ECDF)",
           filename="output/ecdf.png")
     insert_text("README.md", 

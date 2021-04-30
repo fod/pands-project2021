@@ -190,7 +190,7 @@ def ecdfs(data=None, x=None, col=None, title=None, filename=None, vlines=False, 
         # Nested function for highlighting min virginica and max versicolor
         max_vers = np.max(x[50:100])
         min_virg = np.min(x[100:])
-        plt.axvspan(max_vers, min_virg, color="red", alpha=0.3)
+        plt.axvspan(max_vers, min_virg, color="red", alpha=0.2)
 
     if span:
         # Draw the overlap spans in ECDF facets

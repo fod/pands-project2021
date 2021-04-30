@@ -286,7 +286,7 @@ As such, the stripplot here appears to indicate that, while either petal width o
 
 The final distribution plot that will be examined here is the ECDF (REF). The plot below was generated using [```seaborn.displot(... kind="ecdf" ...```](https://seaborn.pydata.org/generated/seaborn.displot.html)).
 
-The ECDF plot plots a function which returns, for any particular value, what proportion of the data lies below that value — it is like a cumulative distribution curve. This can give useful insights into the structure of the data that may be less obvious in some of the other distribution plots. The faceted plot below shows the ECDF for each of the four observed features for each iris variety. Vertical dotted red lines are added at the maximum value for each feature so that the overlap, or region of possible misclassification, can be easily identified.
+The ECDF plot visualises a function which returns, for any particular value, the proportion of the data that lies below that value — it is like a cumulative distribution curve. This can give useful insights into the structure of the data that may be less obvious in some of the other distribution plots. The faceted plot below shows the ECDF for each of the four observed features for each iris variety. Vertical dotted red lines are added at the maximum value for each feature so that the overlap, or region of possible misclassification, can be easily identified.
 
 <!-- {% ECDF %} -->
 
@@ -299,7 +299,12 @@ Examination of the first plot — *Sepal Length* — reveals that all sepal leng
 As noted previously, petal dimensions appear to provide the clearest metric for identification of iris species but, contrary to the assumption made above on observation of the stripplot, it is petal width rather than petal length that will probably provide the fewest misclassifications. This is confirmed by examining the bottom two ecdf plots. Note that the petal length overlap between *I. versicolor* and 
 *I. virginica* accounts for almost 20% of the sample space, whereas, for petal width, the overlap covers less than 10%. 
 
-Recall from the [descriptive statistics](#descriptive-statistics) section that the maximum value for *I. versicolor* petal width is 1.8 cm. This can be confirmed by querying the dataframe: ```np.max(iris[iris["class"]=="Iris-versicolor"]["Petal Width"])```. Another query, this time for all observations with a petal width value of 1.8 (```iris[iris["Petal Width"] == 1.8]```) returns the following result:
+Recall from the [descriptive statistics](#descriptive-statistics) section that the maximum value for *I. versicolor* petal width is 1.8 cm. This can be confirmed by querying the dataframe:
+
+    np.max(iris[iris["class"]=="Iris-versicolor"]["Petal Width"])
+    # Returns 1.8
+ 
+  Another query, this time for all observations with a petal width value of 1.8 (```iris[iris["Petal Width"] == 1.8]```) returns the following result:
 
 
 <!-- {% Petal Width = 1.8 %} -->
@@ -359,6 +364,18 @@ The relationships between each pair of variables can be visualised using a grid 
 
 Based on the observations already made in the discussion of descriptive statistics above, there are no surprises in the pairplot. *I. setosa* is easily separable from the other two varieties based on almost every combination of two features. *I. versicolor* and *I. vriginica* are not completely separable but it seems that plotting petal length against petal width comes closest to identifying species.
 
+Because *I. setosa* is easily discriminated it can be removed from the dataframe to enable a sharper focus on the remaining two problematic (from a separability viewpoint) varieties. This is achieved by creating a new dataframe from a subset of the one that has been used up until now:
+
+    # Remove easily classified I. setosa from dataframe
+    iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
+
+It is also useful to identify the range of values for petal width and length within which classification using those two observed features is difficult. So, using overlap values identified through examination of the [ECDF](#ecdf-empirical-cumulative-distribution-function) plots previously discussed, a new dataframe is created using only those observations:
+
+    # Generate difficult to classify subset of Iris dataset
+    iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
+                     (iris["Petal Length"] <= 5.1) & 
+                     (iris["Petal Width"] >= 1.4) & 
+                     (iris["Petal Width"] <= 1.8)]
 
 
 <!-- {% Classification Petal %} -->
