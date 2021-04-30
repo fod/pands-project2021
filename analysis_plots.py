@@ -192,7 +192,7 @@ def ecdfs(data=None, x=None, col=None, title=None, filename=None, vlines=False, 
         min_virg = np.min(x[100:])
         plt.axvspan(max_vers, min_virg, color="red", alpha=0.2)
 
-    if span:
+    if vspan:
         # Draw the overlap spans in ECDF facets
         g.map(span, "value")
 
