@@ -145,6 +145,10 @@ def main():
     insert_text("README.md", 
                 {"Pairplot": "![Pairplot](" + "output/pairplot.png" + ")"})
 
+    # Calculate correlation matrix and insert into README
+    insert_text("README.md", 
+                {"Correlation": iris.corr().to_markdown(tablefmt="github")})
+
     # Add area columns to iris dataframe
     iris["Sepal Area"] = iris["Sepal Length"] * iris["Sepal Width"]
     iris["Petal Area"] = iris["Petal Length"] * iris["Petal Width"]
@@ -159,9 +163,7 @@ def main():
     iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
 
 
-    # Calculate correlation matrix and insert into README
-    insert_text("README.md", 
-                {"Correlation": iris.corr().to_markdown(tablefmt="github")})
+    
 
     # Generate ECDF Plots and insert into README
     ecdfs(data=iris_long[iris_long["variable"].isin(["Petal Length", "Petal Width"])],
