@@ -122,7 +122,7 @@ def main():
           x="value",
           col="variable",
           vlines=True,
-          title="Empirical Cumulative Distribution Function (ECDF)",
+          title="Empirical Cumulative Distribution Function (ECDF) with maximum values indicated",
           filename="output/ecdf.png")
     insert_text("README.md", 
                 {"ECDF": "![ECDF](" + "output/ecdf.png" + ")"})
@@ -165,7 +165,7 @@ def main():
           x="value",
           col="variable",
           vspan=True,
-          title="Empirical Cumulative Distribution Function (ECDF)",
+          title="Empirical Cumulative Distribution Function (ECDF) with overlaps highlighted",
           filename="output/ecdf_spans.png")
     insert_text("README.md", 
                 {"ECDF SPANS": "![ECDF SPANS](" + "output/ecdf_spans.png" + ")"})
