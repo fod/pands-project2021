@@ -416,7 +416,7 @@ There is no obvious correlation between sepal width and sepal length as displaye
 
 ### Separation improvement
 
-A number of methods exist for reducing the dimensionality of data in order to increase the signal-to-noise ratio and improve classification. Two common methods are principal components analysis (PCA) ([Ali, 2019](https://medium.com/machine-learning-researcher/dimensionality-reduction-pca-and-lda-6be91734f567)) and linear discriminant analysis (LDA) (ibid.). In fact Fisher's (1936) paper which introduced the iris data was a demonstration, using the iris data of LDA.
+A number of methods exist for reducing the dimensionality of data in order to increase the signal-to-noise ratio and improve classification. Two common methods are principal components analysis (PCA) ([Ali, 2019](https://medium.com/machine-learning-researcher/dimensionality-reduction-pca-and-lda-6be91734f567)) and linear discriminant analysis (LDA) (ibid.). In fact Fisher's (1936) paper which introduced the iris data was a demonstration of LDA using the iris data.
 
 Although PCA and LDA are beyond the scope of this project, an interesting and easily achieved dimensionality reduction method specific to this dataset is described by Wicklin (2012). This method involves assuming rectangular sepals and petals and calculating their areas (by length x width). These areas are then plotted against one another. This experiment is repeated below: 
 
