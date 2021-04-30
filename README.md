@@ -451,7 +451,7 @@ Fisher, R.A. (1936). The use of multiple measurements in taxonomic problems, Ann
 
 Wicklin, R. (2012). Discriminating Fisher's iris data by using the petal areas. [online] Available from: <https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html> Accessed: 15th April, 2021.
 
-Stack Overflow Contributors, 2020. Have two columns in Markdown. [online] Available from: <https://stackoverflow.com/a/59852474 > Accessed 15th April, 2020.
+Stack Overflow Contributors, 2020. Have two columns in Markdown. [online] Available from: <https://stackoverflow.com/a/59852474> Accessed 15th April, 2020.
 
 Tabulate Contributors. (2021). Tabulate 0.8.9 Documentation. [online] Available from: <https://pypi.org/project/tabulate/> Accessed 15th April, 2020. ---(tablefmt option in pandas.DataFrame.to_markdown())
 
@@ -468,26 +468,24 @@ Stack Overflow Contributors, 2017. Customizing annotation with Seaborn's FacetGr
 
 Versloot, C. (2020). How to create a confusion matrix with Scikit-learn? [online] <https://www.machinecurve.com/index.php/2020/05/05/how-to-create-a-confusion-matrix-with-scikit-learn/> Accessed 22nd April, 2021.
 
+Stack Overflow Contributors, 2015. How to add a title to Seaborn Facet Plot. [online] Available from: <https://stackoverflow.com/a/29814281> Accessed 15th April, 2020. --- facetgrid titles
 
+DeJesus, J. (2019). What, Why, and How to Read Empirical CDF. [online] 
+Available from: <https://towardsdatascience.com/what-why-and-how-to-read-empirical-cdf-123e2b922480> Accessed 23rd April, 2020. --- ecdf
 
+Galarnyk, M. (2018). Understanding Boxplots. [online] Available from: <https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51> Accessed 23rd April, 2020 --- boxplots
 
+Ford, C. (2020). Understanding Empirical Cumulative Distribution Functions. [online] Available from: <https://data.library.virginia.edu/understanding-empirical-cumulative-distribution-functions/> Accessed 23rd April, 2020. --- ecdf
 
-https://stackoverflow.com/a/29814281 --- facetgrid title
+Waskom, M. (2020). seaborn.ecdfplot Documentation. [online] Available from: <https://seaborn.pydata.org/generated/seaborn.ecdfplot.html> Accessed 24th April, 2020. --- ecdf
 
-https://towardsdatascience.com/what-why-and-how-to-read-empirical-cdf-123e2b922480
+Wikipedia Contributors. (2021). Overfitting. [online] Available from: <https://en.wikipedia.org/wiki/Overfitting> Accessed 29th April, 2020. --- overfitting
 
-https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51
+Pandas Development Team. (2021). pandas.DataFrame.corr Documentation. [online] Available from: <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html> Accessed 26th April, 2020. --- pandas.corr
 
-https://data.library.virginia.edu/understanding-empirical-cumulative-distribution-functions/
+Wikipedia Contributors. (2021). Pearson Correlation Coefficient. [online] Available from: <https://en.wikipedia.org/wiki/Pearson_correlation_coefficient> Accessed 26th April, 2020. --- pearsons correlation coefficient
 
-https://seaborn.pydata.org/generated/seaborn.ecdfplot.html
+Sawla, S. (2018). Iris Flower Classification. [online] Available from <https://medium.com/@srishtisawla/iris-flower-classification-fb6189de3fff> Accessed 29th April, 2020.-- testing various classifiers
 
-https://en.wikipedia.org/wiki/Overfitting
+Stack Overflow Contributors, 2017. Drawing Diagonal line (line of equality) on Seaborn Jointplot. [online] Available from: <https://stackoverflow.com/questions/31391553/> Accessed 29th April, 2020. --- sepline on plot
 
-https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html
-
-https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
-
-https://medium.com/@srishtisawla/iris-flower-classification-fb6189de3fff -- testing various calssifiers
-
-https://stackoverflow.com/questions/31391553/drawing-diagonal-line-line-of-equality-on-seaborn-jointplot -- sepline on plot
