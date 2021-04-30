@@ -160,6 +160,15 @@ def main():
     insert_text("README.md", 
                 {"Correlation": iris.corr().to_markdown(tablefmt="github")})
 
+    # Generate ECDF Plots and insert into README
+    ecdfs(data=iris_long[iris_long["variable"].isin(["Petal Length", "Petal Width"])],
+          x="value",
+          col="variable",
+          vspan=True,
+          title="Empirical Cumulative Distribution Function (ECDF)",
+          filename="output/ecdf_spans.png")
+    insert_text("README.md", 
+                {"ECDF SPANS": "![ECDF SPANS](" + "output/ecdf_spans.png" + ")"})
 
     # Generate Petal scatterplot and insert into README
     scatterplot(data=iris_sub, 

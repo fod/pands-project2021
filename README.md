@@ -378,6 +378,13 @@ It is also useful to identify the range of values for petal width and length wit
                      (iris["Petal Width"] <= 1.8)]
 
 
+<!-- {% ECDF SPANS %} -->
+
+![ECDF SPANS](output/ecdf_spans.png)
+
+<!-- {% END %} -->
+
+
 <!-- {% Classification Petal %} -->
 
 <img src="output/scatter_petal.png" height=500>
