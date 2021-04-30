@@ -369,7 +369,7 @@ Because *I. setosa* is easily discriminated it can be removed from the dataframe
     # Remove easily classified I. setosa from dataframe
     iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
 
-It is also useful to identify the range of values for petal width and length within which classification using those two observed features is difficult. So, using overlap values identified through examination of the [ECDF](#ecdf-empirical-cumulative-distribution-function) plots previously discussed, a new dataframe is created using only those observations:
+It is also useful to identify the range of values for petal width and length within which classification using those two observed features is difficult. Using overlap values identified through examination of the [ECDF](#ecdf-empirical-cumulative-distribution-function) plots previously discussed, which are highlighted in the chart below, a new dataframe is created using only those observations:
 
     # Generate difficult to classify subset of Iris dataset
     iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
@@ -383,6 +383,7 @@ It is also useful to identify the range of values for petal width and length wit
 ![ECDF SPANS](output/ecdf_spans.png)
 
 <!-- {% END %} -->
+
 
 
 <!-- {% Classification Petal %} -->
