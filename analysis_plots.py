@@ -112,7 +112,7 @@ def stripplot(data=None, title=None, filename=None):
         plt.savefig(filename)
 
 
-def scatterplot(data=None, x=None, y=None, overlay=None, 
+def scatterplot(data=None, x=None, y=None, overlay=None, sepline=None,
                 title=None, filename=None):
 # Generate a jointplot (relational plot with edge distribution plots)
 # from passed wide-form dataframe with an optional second dataframe overlaid
@@ -144,6 +144,10 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
 
         # Add the overlaid data to the legend
         g.ax_joint.legend()
+
+    # Add line separating classes if desired
+    if sepline:
+        g.ax_joint.plot(sepline[0],sepline[1], linestyle="dashed")
 
     # Set title if specified
     if title:                  

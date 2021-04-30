@@ -178,7 +178,8 @@ def main():
                          "y": iris_rule["Petal Width"],
                          "label": "Difficult to classify"},
                 title="Petal Length x Petal Width with Difficult-to-Classify\nObservations Highlighted",
-                filename="output/scatter_petal.png")
+                filename="output/scatter_petal.png",
+                sepline=[(4,6),(1.9,1)])
     insert_text("README.md", 
                 {"Classification Petal": '<img src="' + 'output/scatter_petal.png"' + ' height=500>'})
 

@@ -394,12 +394,17 @@ and the overlaid dataset is plotted by referencing the original plot (REF):
 
     g.ax_joint.scatter(...)
 
+The chart below shows the correlation between petal width and petal length for *I. versicolor* and *I. virginica*. Red circles are drawn around the observations which fall into the overlapped portions of the ecdf plot above. These are the observations that can't be classified using one or other of the two features shown. The heavier red circles represent points where a number of observations occupy the same position on the scatterplot.
+
 
 <!-- {% Classification Petal %} -->
 
 <img src="output/scatter_petal.png" height=500>
 
 <!-- {% END %} -->
+
+
+The plot above shows that *I. versicolor* and *I. virginica* are not linearly separable using a combination of petal width and petal length. This is ot surprising as it has been noted many times including by Fisher(1936) in his seminal paper. However, note that a number of the *I. versicolor*
 
 
 <!-- {% Classification Sepal %} -->
