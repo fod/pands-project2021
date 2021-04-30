@@ -155,7 +155,7 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
         plt.savefig(filename)
 
 
-def ecdfs(data=None, x=None, col=None, title=None, filename=None):
+def ecdfs(data=None, x=None, col=None, title=None, filename=None, vlines=False, span=False):
 # Generate faceted ecdf plots from passed long-form dataframe
 
     # Clear the current  matplotlib figure
@@ -182,8 +182,19 @@ def ecdfs(data=None, x=None, col=None, title=None, filename=None):
             plt.axvline(np.max(n), linestyle = '--', color = 'red', linewidth=1, label="Max")
             # plt.axvline(np.min(n), linestyle = '--', color = 'pink', linewidth=2, label="Min")
 
-    # Draw the max lines in ECDF facets
-    g.map(vertical_line, "value")
+    if vlines:
+        # Draw the max lines in ECDF facets
+        g.map(vertical_line, "value")
+
+    def span(x, **kwargs):
+        # Nested function for highlighting min virginica and max versicolor
+        max_vers = np.max(x[50:100])
+        min_virg = np.min(x[100:])
+        plt.axvspan(max_vers, min_virg, color="red", alpha=0.3)
+
+    if span:
+        # Draw the overlap spans in ECDF facets
+        g.map(span, "value")
 
     # Label y-axes
     g.set_ylabels("proportion")
