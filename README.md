@@ -347,13 +347,16 @@ As noted in the explanatory file which accompanies the downloaded iris dataset, 
 
 ### Visualisation of Correlation
 
-
+The relationships between each pair of variables can be visualised using a grid of scatterplots, known, in Seaborn, as a pairplot (REF). The pariplot below was generated using ```seaborn.pairplot(... kind="scatter" ...)```. The pairplot is useful for quickly assessing which pairs of variables correlate with one another and also which are most capable of separating the classes.
 
 <!-- {% Pairplot %} -->
 
 ![Pairplot](output/pairplot.png)
 
 <!-- {% END %} -->
+
+Based on the observations already made in the discussion of descriptive statistics above, there are no surprises in the pairplot. *I. setosa* is easily separable from the other two varieties based on almost every combination of two features. *I. versicolor* and *I. vriginica* are not completely separable but it seems that plotting petal length against petal width comes closest to identifying species.
+
 
 
 <!-- {% Classification Petal %} -->
