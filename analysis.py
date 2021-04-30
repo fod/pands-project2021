@@ -203,7 +203,8 @@ def main():
                          "y": iris_rule["Sepal Area"],
                          "label": "Difficult to classify"},
                 title="Petal Area x Sepal Area with Difficult-to-Classify\nObservations Highlighted",
-                filename="output/scatter_area.png")
+                filename="output/scatter_area.png",
+                sepline=[(7.4,7.7),(10,25)])
     insert_text("README.md", 
                 {"Classification Area": '<img src="' + 'output/scatter_area.png"' + ' height=500>'})
 

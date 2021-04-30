@@ -419,17 +419,17 @@ There is no obvious correlation between sepal width and sepal length as displaye
 
 ### Separation improvement
 
+A number of methods exist for reducing the dimensionality of data in order to increase the signal-to-noise ratio and improve classification. Two common methods are principal components analysis (PCA) (REF) and linear discriminant analysis (LDA) (REF). In fact Fisher's (1936) paper which introduced the iris data was a demonstration, using the iris data of LDA.
+
+Although PCA and LDA are beyond the scope of this project, an interesting and easily achieved dimensionality reduction method specific to this dataset is described by Wicklin (2012). This method involves assuming rectangular sepals and petals and calculating their areas (by length x width). These areas are then plotted against one another. This experiment is repeated below: 
+
 <!-- {% Classification Area %} -->
 
 <img src="output/scatter_area.png" height=500>
 
 <!-- {% END %} -->
 
-1. Dimensionality reduction
-    1. LDA
-    2. PCA
-    3. Area
-
+As is evident in the chart above, dimensionality reduction by calculating leaf and sepal area is a quite effective aid to classification. Wicklin (2012) points out that it does almost as good a job as LDA.
 
 ## Further Study
 
@@ -445,9 +445,16 @@ There is no obvious correlation between sepal width and sepal length as displaye
 
 ## References
 
-Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science. 
+Dua, D. and Graff, C. (2019). UCI Machine Learning Repository Irvine, CA: University of California, School of Information and Computer Science. [online] Available from: <http://archive.ics.uci.edu/ml> Accessed: 21st March, 2021.
 
-Fisher, R.A. (1936). The use of multiple measurements in taxonomic problems, Annual Eugenics, 7, Part II, 179-188 
+Fisher, R.A. (1936). The use of multiple measurements in taxonomic problems, Annual Eugenics, 7, Part II, 179-188.
+
+Wicklin, R. (2012). Discriminating Fisher's iris data by using the petal areas. [online] Available from: <https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html> Accessed: 15th April, 2021.
+
+
+-----------------------
+
+
 
 https://stackoverflow.com/a/59852474 (markdown columns)
 https://pypi.org/project/tabulate/ (tablefmt option in pandas.DataFrame.to_markdown())
