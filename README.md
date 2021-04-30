@@ -451,20 +451,26 @@ Fisher, R.A. (1936). The use of multiple measurements in taxonomic problems, Ann
 
 Wicklin, R. (2012). Discriminating Fisher's iris data by using the petal areas. [online] Available from: <https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html> Accessed: 15th April, 2021.
 
+Stack Overflow Contributors, 2020. Have two columns in Markdown. [online] Available from: <https://stackoverflow.com/a/59852474 > Accessed 15th April, 2020.
 
------------------------
+Tabulate Contributors. (2021). Tabulate 0.8.9 Documentation. [online] Available from: <https://pypi.org/project/tabulate/> Accessed 15th April, 2020. ---(tablefmt option in pandas.DataFrame.to_markdown())
+
+Waskom, M. (2020). Data structures accepted by seaborn. [online] Available from: <https://seaborn.pydata.org/tutorial/data_structure.html> Accessed 20th April, 2020.
+--- long vs wide formats
+
+Pandas Development Team. (2021). pandas.melt Documentation. [online] Available from: <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html> Accessed 21st April, 2020. --- dataframe.melt()
+
+Open Tech Guides. (2019). Selecting, Slicing and Filtering data in a Pandas DataFrame. [online] Available from: <https://www.opentechguides.com/how-to/article/pandas/193/index-slice-subset.html> Accessed 7th April, 2020. --- dataframe slicing
+
+Yildrim Soner (2020). 7 Points to Create Better Histograms with Seaborn [online] Available from: <https://towardsdatascience.com/7-points-to-create-better-histograms-with-seaborn-5fb542763169> Accessed 13th April, 2020. ---histograms
+
+Stack Overflow Contributors, 2017. Customizing annotation with Seaborn's FacetGrid. [online] Available from: <https://stackoverflow.com/a/31688467> Accessed 15th April, 2020. --- facetgrid titles
+
+Versloot, C. (2020). How to create a confusion matrix with Scikit-learn? [online] <https://www.machinecurve.com/index.php/2020/05/05/how-to-create-a-confusion-matrix-with-scikit-learn/> Accessed 22nd April, 2021.
 
 
 
-https://stackoverflow.com/a/59852474 (markdown columns)
-https://pypi.org/project/tabulate/ (tablefmt option in pandas.DataFrame.to_markdown())
-https://seaborn.pydata.org/tutorial/data_structure.html --- long vs wide formats
-https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html --- dataframe.melt()
-https://www.opentechguides.com/how-to/article/pandas/193/index-slice-subset.html --- dataframe slicing
-https://towardsdatascience.com/7-points-to-create-better-histograms-with-seaborn-5fb542763169 --- histograms
-https://stackoverflow.com/a/31688467 --- On setting titles on facetgrids
-https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html --- LDA and a trick
-https://www.machinecurve.com/index.php/2020/05/05/how-to-create-a-confusion-matrix-with-scikit-learn/ --- confusion matrix
+
 
 https://stackoverflow.com/a/29814281 --- facetgrid title
 
