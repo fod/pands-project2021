@@ -333,12 +333,14 @@ A correlation matrix can be produced using ```DataFrame.corr()``` (REF). This me
 
 <!-- {% Correlation %} -->
 
-|              |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width |
-|--------------|----------------|---------------|----------------|---------------|
-| Sepal Length |       1        |     -0.11757  |       0.871754 |      0.817941 |
-| Sepal Width  |      -0.11757  |      1        |      -0.42844  |     -0.366126 |
-| Petal Length |       0.871754 |     -0.42844  |       1        |      0.962865 |
-| Petal Width  |       0.817941 |     -0.366126 |       0.962865 |      1        |
+|              |   Sepal Length |   Sepal Width |   Petal Length |   Petal Width |   Sepal Area |   Petal Area |
+|--------------|----------------|---------------|----------------|---------------|--------------|--------------|
+| Sepal Length |       1        |     -0.11757  |       0.871754 |      0.817941 |     0.67918  |     0.8573   |
+| Sepal Width  |      -0.11757  |      1        |      -0.42844  |     -0.366126 |     0.643461 |    -0.288431 |
+| Petal Length |       0.871754 |     -0.42844  |       1        |      0.962865 |     0.360909 |     0.958422 |
+| Petal Width  |       0.817941 |     -0.366126 |       0.962865 |      1        |     0.368845 |     0.980333 |
+| Sepal Area   |       0.67918  |      0.643461 |       0.360909 |      0.368845 |     1        |     0.454503 |
+| Petal Area   |       0.8573   |     -0.288431 |       0.958422 |      0.980333 |     0.454503 |     1        |
 
 <!-- {% END %} -->
 
@@ -432,3 +434,5 @@ https://en.wikipedia.org/wiki/Overfitting
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html
 
 https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
+
+https://medium.com/@srishtisawla/iris-flower-classification-fb6189de3fff -- testing various calssifiers
