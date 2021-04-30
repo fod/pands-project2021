@@ -155,7 +155,7 @@ def scatterplot(data=None, x=None, y=None, overlay=None,
         plt.savefig(filename)
 
 
-def ecdfs(data=None, x=None, col=None, title=None, filename=None, vlines=False, span=False):
+def ecdfs(data=None, x=None, col=None, title=None, filename=None, vlines=False, vspan=False):
 # Generate faceted ecdf plots from passed long-form dataframe
 
     # Clear the current  matplotlib figure
