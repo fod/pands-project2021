@@ -155,6 +155,15 @@ def main():
     insert_text("README.md", 
                 {"Pairplot": "![Pairplot](" + "output/pairplot.png" + ")"})
 
+    # Add area columns to iris dataframe
+    iris["Sepal Area"] = iris["Sepal Length"] * iris["Sepal Width"]
+    iris["Petal Area"] = iris["Petal Length"] * iris["Petal Width"]
+
+    # Update difficult-to-classify subset
+    iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
+                     (iris["Petal Length"] <= 5.1) & 
+                     (iris["Petal Width"] >= 1.4) & 
+                     (iris["Petal Width"] <= 1.8)]
 
     # Generate Petal scatterplot and insert into README
     scatterplot(data=iris_sub, 
@@ -179,16 +188,6 @@ def main():
                 filename="output/scatter_sepal.png")
     insert_text("README.md", 
                 {"Classification Sepal": '<img src="' + 'output/scatter_sepal.png"' + ' height=500>'})
-
-    # Add area columns to iris dataframe
-    iris["Sepal Area"] = iris["Sepal Length"] * iris["Sepal Width"]
-    iris["Petal Area"] = iris["Petal Length"] * iris["Petal Width"]
-
-    # Update difficult-to-classify subset
-    iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
-                     (iris["Petal Length"] <= 5.1) & 
-                     (iris["Petal Width"] >= 1.4) & 
-                     (iris["Petal Width"] <= 1.8)]
 
     # Update Iris_sub
     iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
