@@ -445,47 +445,67 @@ As is evident in the chart above, dimensionality reduction by calculating leaf a
 
 ## References
 
+DeJesus, J. (2019). What, Why, and How to Read Empirical CDF. [online] 
+Available from: <https://towardsdatascience.com/what-why-and-how-to-read-empirical-cdf-123e2b922480> Accessed 23rd April, 2020. --- ecdf
+
 Dua, D. and Graff, C. (2019). UCI Machine Learning Repository Irvine, CA: University of California, School of Information and Computer Science. [online] Available from: <http://archive.ics.uci.edu/ml> Accessed: 21st March, 2021.
 
 Fisher, R.A. (1936). The use of multiple measurements in taxonomic problems, Annual Eugenics, 7, Part II, 179-188.
 
-Wicklin, R. (2012). Discriminating Fisher's iris data by using the petal areas. [online] Available from: <https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html> Accessed: 15th April, 2021.
-
-Stack Overflow Contributors, 2020. Have two columns in Markdown. [online] Available from: <https://stackoverflow.com/a/59852474> Accessed 15th April, 2020.
-
-Tabulate Contributors. (2021). Tabulate 0.8.9 Documentation. [online] Available from: <https://pypi.org/project/tabulate/> Accessed 15th April, 2020. ---(tablefmt option in pandas.DataFrame.to_markdown())
-
-Waskom, M. (2020). Data structures accepted by seaborn. [online] Available from: <https://seaborn.pydata.org/tutorial/data_structure.html> Accessed 20th April, 2020.
---- long vs wide formats
-
-Pandas Development Team. (2021). pandas.melt Documentation. [online] Available from: <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html> Accessed 21st April, 2020. --- dataframe.melt()
-
-Open Tech Guides. (2019). Selecting, Slicing and Filtering data in a Pandas DataFrame. [online] Available from: <https://www.opentechguides.com/how-to/article/pandas/193/index-slice-subset.html> Accessed 7th April, 2020. --- dataframe slicing
-
-Yildrim Soner (2020). 7 Points to Create Better Histograms with Seaborn [online] Available from: <https://towardsdatascience.com/7-points-to-create-better-histograms-with-seaborn-5fb542763169> Accessed 13th April, 2020. ---histograms
-
-Stack Overflow Contributors, 2017. Customizing annotation with Seaborn's FacetGrid. [online] Available from: <https://stackoverflow.com/a/31688467> Accessed 15th April, 2020. --- facetgrid titles
-
-Versloot, C. (2020). How to create a confusion matrix with Scikit-learn? [online] <https://www.machinecurve.com/index.php/2020/05/05/how-to-create-a-confusion-matrix-with-scikit-learn/> Accessed 22nd April, 2021.
-
-Stack Overflow Contributors, 2015. How to add a title to Seaborn Facet Plot. [online] Available from: <https://stackoverflow.com/a/29814281> Accessed 15th April, 2020. --- facetgrid titles
-
-DeJesus, J. (2019). What, Why, and How to Read Empirical CDF. [online] 
-Available from: <https://towardsdatascience.com/what-why-and-how-to-read-empirical-cdf-123e2b922480> Accessed 23rd April, 2020. --- ecdf
+Ford, C. (2020). Understanding Empirical Cumulative Distribution Functions. [online] Available from: <https://data.library.virginia.edu/understanding-empirical-cumulative-distribution-functions/> Accessed 23rd April, 2020. --- ecdf
 
 Galarnyk, M. (2018). Understanding Boxplots. [online] Available from: <https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51> Accessed 23rd April, 2020 --- boxplots
 
-Ford, C. (2020). Understanding Empirical Cumulative Distribution Functions. [online] Available from: <https://data.library.virginia.edu/understanding-empirical-cumulative-distribution-functions/> Accessed 23rd April, 2020. --- ecdf
+Open Tech Guides. (2019). Selecting, Slicing and Filtering data in a Pandas DataFrame. [online] Available from: <https://www.opentechguides.com/how-to/article/pandas/193/index-slice-subset.html> Accessed 7th April, 2020. --- dataframe slicing
 
-Waskom, M. (2020). seaborn.ecdfplot Documentation. [online] Available from: <https://seaborn.pydata.org/generated/seaborn.ecdfplot.html> Accessed 24th April, 2020. --- ecdf
+Pandas Development Team. (2021a). pandas.DataFrame.corr Documentation. [online] Available from: <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html> Accessed 26th April, 2020. --- pandas.corr
 
-Wikipedia Contributors. (2021). Overfitting. [online] Available from: <https://en.wikipedia.org/wiki/Overfitting> Accessed 29th April, 2020. --- overfitting
-
-Pandas Development Team. (2021). pandas.DataFrame.corr Documentation. [online] Available from: <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html> Accessed 26th April, 2020. --- pandas.corr
-
-Wikipedia Contributors. (2021). Pearson Correlation Coefficient. [online] Available from: <https://en.wikipedia.org/wiki/Pearson_correlation_coefficient> Accessed 26th April, 2020. --- pearsons correlation coefficient
+Pandas Development Team. (2021b). pandas.melt Documentation. [online] Available from: <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html> Accessed 21st April, 2020. --- dataframe.melt()
 
 Sawla, S. (2018). Iris Flower Classification. [online] Available from <https://medium.com/@srishtisawla/iris-flower-classification-fb6189de3fff> Accessed 29th April, 2020.-- testing various classifiers
 
-Stack Overflow Contributors, 2017. Drawing Diagonal line (line of equality) on Seaborn Jointplot. [online] Available from: <https://stackoverflow.com/questions/31391553/> Accessed 29th April, 2020. --- sepline on plot
+Stack Overflow Contributors, (2015). How to add a title to Seaborn Facet Plot. [online] Available from: <https://stackoverflow.com/a/29814281> Accessed 15th April, 2020. --- facetgrid titles
+
+Stack Overflow Contributors, (2017a). Customizing annotation with Seaborn's FacetGrid. [online] Available from: <https://stackoverflow.com/a/31688467> Accessed 15th April, 2020. --- facetgrid titles
+
+Stack Overflow Contributors, (2017b). Drawing Diagonal line (line of equality) on Seaborn Jointplot. [online] Available from: <https://stackoverflow.com/questions/31391553/> Accessed 29th April, 2020. --- sepline on plot
+
+Stack Overflow Contributors, (2020). Have two columns in Markdown. [online] Available from: <https://stackoverflow.com/a/59852474> Accessed 15th April, 2020.
+
+Tabulate Contributors. (2021). Tabulate 0.8.9 Documentation. [online] Available from: <https://pypi.org/project/tabulate/> Accessed 15th April, 2020. ---(tablefmt option in pandas.DataFrame.to_markdown())
+
+Versloot, C. (2020). How to create a confusion matrix with Scikit-learn? [online] <https://www.machinecurve.com/index.php/2020/05/05/how-to-create-a-confusion-matrix-with-scikit-learn/> Accessed 22nd April, 2021.
+
+Waskom, M. (2020a). Data structures accepted by seaborn. [online] Available from: <https://seaborn.pydata.org/tutorial/data_structure.html> Accessed 20th April, 2020.
+--- long vs wide formats
+
+Waskom, M. (2020b). seaborn.ecdfplot Documentation. [online] Available from: <https://seaborn.pydata.org/generated/seaborn.ecdfplot.html> Accessed 24th April, 2020. --- ecdf
+
+Wikipedia Contributors. (2021a). Overfitting. [online] Available from: <https://en.wikipedia.org/wiki/Overfitting> Accessed 29th April, 2020. --- overfitting
+
+Wikipedia Contributors. (2021b). Pearson Correlation Coefficient. [online] Available from: <https://en.wikipedia.org/wiki/Pearson_correlation_coefficient> Accessed 26th April, 2020. --- pearsons correlation coefficient
+
+Wicklin, R. (2012). Discriminating Fisher's iris data by using the petal areas. [online] Available from: <https://blogs.sas.com/content/iml/2012/08/09/discriminating-fishers-iris-data-by-using-the-petal-areas.html> Accessed: 15th April, 2021.
+
+Yildrim Soner (2020). 7 Points to Create Better Histograms with Seaborn [online] Available from: <https://towardsdatascience.com/7-points-to-create-better-histograms-with-seaborn-5fb542763169> Accessed 13th April, 2020. ---histograms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
