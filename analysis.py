@@ -134,20 +134,6 @@ def main():
                 {"Petal Width = 1.8": max_petal_width_tbl.to_markdown(tablefmt="github")})
 
 
-    # Generate view on difficult to classify subset of Iris dataset
-    iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
-                     (iris["Petal Length"] <= 5.1) & 
-                     (iris["Petal Width"] >= 1.4) & 
-                     (iris["Petal Width"] <= 1.8)]
-
-    # Remove easily classified I. setosa from dataframe
-    iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
-
-    # Calculate correlation matrix and insert into README
-    insert_text("README.md", 
-                {"Correlation": iris.corr().to_markdown(tablefmt="github")})
-
-
     # Generate pairplots and insert into README
     pairplots(data=iris, 
               title="Scatter plots of all feature combinations in iris dataset",
@@ -155,15 +141,22 @@ def main():
     insert_text("README.md", 
                 {"Pairplot": "![Pairplot](" + "output/pairplot.png" + ")"})
 
-    # Add area columns to iris dataframe
-    iris["Sepal Area"] = iris["Sepal Length"] * iris["Sepal Width"]
-    iris["Petal Area"] = iris["Petal Length"] * iris["Petal Width"]
 
-    # Update difficult-to-classify subset
+    # Generate difficult to classify subset of Iris dataset
     iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
                      (iris["Petal Length"] <= 5.1) & 
                      (iris["Petal Width"] >= 1.4) & 
-                     (iris["Petal Width"] <= 1.8)]
+                     (iris["Petal Width"] < 1.8)]
+
+    # Remove easily classified I. setosa from dataframe
+    iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
+
+
+    # Calculate correlation matrix and insert into README
+    insert_text("README.md", 
+                {"Correlation": iris.corr().to_markdown(tablefmt="github")})
+
+
 
     # Generate Petal scatterplot and insert into README
     scatterplot(data=iris_sub, 
@@ -189,7 +182,17 @@ def main():
     insert_text("README.md", 
                 {"Classification Sepal": '<img src="' + 'output/scatter_sepal.png"' + ' height=500>'})
 
-    # Update Iris_sub
+    # Add area columns to iris dataframe
+    iris["Sepal Area"] = iris["Sepal Length"] * iris["Sepal Width"]
+    iris["Petal Area"] = iris["Petal Length"] * iris["Petal Width"]
+
+    # Update difficult-to-classify subset to include Area measurements
+    iris_rule = iris[(iris["Petal Length"] >= 4.5) & 
+                     (iris["Petal Length"] <= 5.1) & 
+                     (iris["Petal Width"] >= 1.4) & 
+                     (iris["Petal Width"] <= 1.8)]
+
+    # Update Iris_sub to include Area measurements
     iris_sub = iris[iris["class"].isin(["Iris-virginica", "Iris-versicolor"])]
 
     # Plot areas and insert into README
