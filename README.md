@@ -17,9 +17,6 @@ HDip Data Analytics Programming and Scripting Project
 - [Correlation](#correlation)
     - [Visualisation of Correlation](#visualisation-of-correlation)
     - [Separation improvement](#separation-improvement)
-- [Further Study](#further-study)
-    - [Uncertainty measurement](#uncertainty-measurement)
-    - [Machine learning](#machine-learning)
 - [References](#references)
 
 <!-- /TOC -->
@@ -432,18 +429,6 @@ Although PCA and LDA are beyond the scope of this project, an interesting and ea
 
 As is evident in the chart above, dimensionality reduction by calculating leaf and sepal area is a quite effective aid to classification. Wicklin (2012) points out that it does almost as good a job as LDA.
 
-## Further Study
-
-
-### Uncertainty measurement
-1. Probability of misclassification
-2. identification of high probability areas
-3. Identification on plots of areas with higher likelihood of misclassification (density surface?)
-
-### Machine learning
-1. Unsupervised classification
-2. Supervised classification
-3. Function estimation
 
 ## References
 
