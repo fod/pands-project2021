@@ -404,7 +404,9 @@ The chart below shows the correlation between petal width and petal length for *
 <!-- {% END %} -->
 
 
-The plot above shows that *I. versicolor* and *I. virginica* are not linearly separable using a combination of petal width and petal length. This is ot surprising as it has been noted many times including by Fisher(1936) in his seminal paper. However, note that a number of the *I. versicolor*
+The plot above shows that *I. versicolor* and *I. virginica* are not linearly separable using a combination of petal width and petal length. This is ot surprising as it has been noted many times including by Fisher (1936) in his seminal paper. However, note the dashed blue line separating the two classes - many of the "difficult-to-classify" *I. versicolor* observations are no unambiguously identified correctly.
+
+To demonstrate the tracking of these ambiguous points, and to show the unsuitability of sepal dimensions for iris identification, sepal width is plotted against sepal length below. Difficult-to-classify points, as defined previously, are again identified.
 
 
 <!-- {% Classification Sepal %} -->
@@ -413,8 +415,7 @@ The plot above shows that *I. versicolor* and *I. virginica* are not linearly se
 
 <!-- {% END %} -->
 
-
-
+There is no obvious correlation between sepal width and sepal length as displayed in the chart above. The difficult-to-classify points appear to be randomly distributed around the plot, implying that sepal dimension observations are unlikely to contribute to the identification of these samples.
 
 ### Separation improvement
 
@@ -475,3 +476,5 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr
 https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
 
 https://medium.com/@srishtisawla/iris-flower-classification-fb6189de3fff -- testing various calssifiers
+
+https://stackoverflow.com/questions/31391553/drawing-diagonal-line-line-of-equality-on-seaborn-jointplot -- sepline on plot
