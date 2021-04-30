@@ -17,7 +17,7 @@ HDip Data Analytics Programming and Scripting Project
 - [Correlation](#correlation)
     - [Visualisation of Correlation](#visualisation-of-correlation)
     - [Separation improvement](#separation-improvement)
-- [References](#references)
+- [References and Sources](#references-and-sources)
 
 <!-- /TOC -->
 
@@ -430,7 +430,7 @@ Although PCA and LDA are beyond the scope of this project, an interesting and ea
 As is evident in the chart above, dimensionality reduction by calculating leaf and sepal area is a quite effective aid to classification. Wicklin (2012) points out that it does almost as good a job as LDA.
 
 
-## References
+## References and Sources
 
 Ali, A. (2019). Dimensionality Reduction(PCA and LDA) with Practical Implementation. [online] <https://medium.com/machine-learning-researcher/dimensionality-reduction-pca-and-lda-6be91734f567> Accessed 25th April, 2021
 
