@@ -5,6 +5,7 @@
 # Imports
 import pandas as pd
 import numpy as np
+import os
 
 # analysis_util provides a templating system to populate README.md 
 # and some data conversion functions
@@ -81,6 +82,8 @@ def main():
     insert_text("README.md", tables)
 
     # Save descriptive stats to csv files
+    if not os.path.exists('output'):
+        os.makedirs('output')
     df_to_csv("output/full.csv", full_summary)
     df_to_csv("output/class.csv", class_summaries)
 

@@ -57,6 +57,7 @@ The code in this project is spread over three files:
 
 The [```output```](output/) directory contains descriptive statistics in CSV format, and all of the plots used in this report, in png format. The [```iris_data```](iris_data/) directory contains all of the files pertaining to Fisher's iris data which were downloaded for the project. If the [```analysis.py```](analysis.py) file is run, and the correct libraries are available, the [```output```](output/) directory is populated with CSV files and images, and this current (README) file is populated with tables and links to the images that are output during the program run.
 
+Note that the output of this software is this README.md file and the contents of the [output](output/) folder. The best way to run it is to download the entire repository so that the input iris data and the README.md file are all where the program expects them to be. If [analysis.py](analysis.py) is run without any changes to the project code, the README.md files and the contents of the output folder will be rewritten identically as they are now and the result will indistinguishable from the project as it currently exists.
 
 ## Data preparation
 

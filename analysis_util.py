@@ -5,6 +5,8 @@
 import fileinput
 import re
 import pandas as pd
+import sys
+
 
 """
 This file contains some functions that are both reusable in other projects
@@ -73,8 +75,9 @@ def insert_text(filename, content):
                     print(line, end="")
 
     except IOError as e:
-        print(f"File error: {e}")
- 
+        print(f"File error: {e}: README.md must exist in the project root.")
+        sys.exit()
+
 
 def csv_to_df(filename, colnames):
 # Load csv data into pandas dataframe and name the columns; return the dataframe
@@ -86,6 +89,7 @@ def csv_to_df(filename, colnames):
 
     except IOError as e:
         print(f"File error: {e}")
+        sys.exit()
 
     return df
 
@@ -98,5 +102,6 @@ def df_to_csv(filename, df):
             f.write(df.to_csv())
 
     except IOError as e:
-        print(f"File error: {e}") 
+        print(f"File error: {e}")
+        
 
